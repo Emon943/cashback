@@ -99,7 +99,7 @@
 			<div id="homepage_header_logo">
 				<a class="ignore-register-modal" href="index.php" title="Return to Homepage" class="lo_link"><img src="img/images/guest/logo.png" alt="logo" class="head_logo" /></a>
 
-				<a class="home-icon" href="index.html"><img src="img/home_icon.png" alt="Return to Homepage" title="Return to Homepage"></a>
+				<a class="home-icon" href="index.php"><img src="img/home_icon.png" alt="Return to Homepage" title="Return to Homepage"></a>
 			</div>
 
 			<div id="header_caption">
@@ -116,7 +116,7 @@
 		<div class="wrap">
 			<div class="innerslide">
 
-				<a href="view_retailer9287.html?rid=3184"><img src="upload/macys2.png"  /></a><a href="view_retailer5e19.html?rid=1874913"><img src="upload/Hot%20Summer%20Travel%20Deals%20facebook%20(1).png"  /></a><a href="view_retailer97bb.html?rid=24550"><img src="upload/vitamin%20World.png"  /></a><a href="index.html"><img src="upload/homecbk.png"  /></a><a href="view_retailerdf88.html?rid=36061"><img src="upload/adminbonton.png"  /></a>			</div>
+				<a href="view_retailer9287.html?rid=3184"><img src="upload/macys2.png"  /></a><a href="view_retailer5e19.html?rid=1874913"><img src="upload/Hot%20Summer%20Travel%20Deals%20facebook%20(1).png"  /></a><a href="view_retailer97bb.html?rid=24550"><img src="upload/vitamin%20World.png"  /></a><a href="index.php"><img src="upload/homecbk.png"  /></a><a href="view_retailerdf88.html?rid=36061"><img src="upload/adminbonton.png"  /></a>			</div>
 		</div>
 	</div>
 
@@ -308,7 +308,7 @@
 </div><!-- .wrap -->
 
 <div id="need_more_cash">
-	<a href="index.html"><img src="images/need_cash_back.png" alt="Need More Cash Back?" /></a><br />
+	<a href="index.php"><img src="images/need_cash_back.png" alt="Need More Cash Back?" /></a><br />
 	<a style="cursor:pointerl;" class="hide_link lo_link">Hide</a>
 </div>
 
@@ -389,7 +389,7 @@
 		</div>
 
 		<div class="right">
-			<a class="ignore-register-modal" href="index.html"><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>
+			<a class="ignore-register-modal" href="index.php"><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>
 		</div>
 
 		<div class="share_text">

@@ -2,7 +2,7 @@
     include 'config/config.php';
 	 $dbObj =	new DBUtility();
 	
-	$msg="Thank You For Being With Us";
+	$msg="Sign Up Complete. Thank you.";
 	if(isset($_POST['submit']))
 	{
 	$fname=$_POST['fname'];
@@ -14,7 +14,7 @@
 	VALUES ('".$fname."', '".$lname."', '".$email."','".$password."')";
 
 	if (mysql_query($sql)) {
-		echo $msg;
+	
 	} else {
 		echo "Error: " . $sql . "<br>" . mysql_error();
 	}
@@ -99,11 +99,22 @@
 			<div id="homepage_header_logo">
 				<a class="ignore-register-modal" href="index.php" title="Return to Homepage" class="lo_link"><img src="img/images/guest/logo.png" alt="logo" class="head_logo" /></a>
 
-				<a class="home-icon" href="index.html"><img src="img/home_icon.png" alt="Return to Homepage" title="Return to Homepage"></a>
+				<a class="home-icon" href="index.php"><img src="img/home_icon.png" alt="Return to Homepage" title="Return to Homepage"></a>
 			</div>
 
 			<div id="header_caption">
-				The easiest way to <br /> <span class="green_text">SAVE MONEY</span> and <span class="green_text">MAKE MONEY</span><br /> on stuff you already buy!<br /><br > 
+				The easiest way to <br /> <span class="green_text">SAVE MONEY</span> and <span class="green_text">MAKE MONEY</span><br /> on stuff you already buy!<br/>
+				<font color="#D75C4F">
+				<?php 
+				if(isset($_POST['submit']))
+				{
+					echo $msg;
+				}
+					
+				?> 
+				</font>
+				
+				<br> 
 				<span class="try_now">Try it now, It's free!</span>
 			</div>
 		</div>
@@ -116,7 +127,7 @@
 		<div class="wrap">
 			<div class="innerslide">
 
-				<a href="view_retailer9287.html?rid=3184"><img src="upload/macys2.png"  /></a><a href="view_retailer5e19.html?rid=1874913"><img src="upload/Hot%20Summer%20Travel%20Deals%20facebook%20(1).png"  /></a><a href="view_retailer97bb.html?rid=24550"><img src="upload/vitamin%20World.png"  /></a><a href="index.html"><img src="upload/homecbk.png"  /></a><a href="view_retailerdf88.html?rid=36061"><img src="upload/adminbonton.png"  /></a>			</div>
+				<a href="view_retailer9287.html?rid=3184"><img src="upload/macys2.png"  /></a><a href="view_retailer5e19.html?rid=1874913"><img src="upload/Hot%20Summer%20Travel%20Deals%20facebook%20(1).png"  /></a><a href="view_retailer97bb.html?rid=24550"><img src="upload/vitamin%20World.png"  /></a><a href="index.php"><img src="upload/homecbk.png"  /></a><a href="view_retailerdf88.html?rid=36061"><img src="upload/adminbonton.png"  /></a>			</div>
 		</div>
 	</div>
 
@@ -213,7 +224,7 @@
 							<table width="100%" border="0" cellspacing="0" cellpadding="3" style="float:left;">
 								<tr>
 									<td width="65%" align="left" valign="top">
-										<a class="retailer_title" href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>"><?php echo $res[$i]["name"];?></a> <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.html?act=add&amp;rid=773'"><img src="img/images/star.png" border="0" alt="add" /></a>
+										<a class="retailer_title" href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>"><?php echo $res[$i]["name"];?></a> <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.php?act=add&amp;rid=773'"><img src="img/images/star.png" border="0" alt="add" /></a>
 									</td>
 									<td nowrap="nowrap" width="10%" align="right" valign="top" class="no-content-cell"> &nbsp; </td>
 									<td nowrap="nowrap" width="30%" align="right" valign="top" class="no-content-cell"> &nbsp; </td>
@@ -307,7 +318,7 @@
 </div><!-- .wrap -->
 
 <div id="need_more_cash">
-	<a href="index.html"><img src="images/need_cash_back.png" alt="Need More Cash Back?" /></a><br />
+	<a href="index.php"><img src="images/need_cash_back.png" alt="Need More Cash Back?" /></a><br />
 	<a style="cursor:pointerl;" class="hide_link lo_link">Hide</a>
 </div>
 
@@ -324,10 +335,10 @@
 			<p class="blurb">Use Cash Back Kaboom’s fast and easy invitation methods to invite others. Those you invite will be added to your Shopping Network and you’ll get paid each time they shop - over and over again - forever!*</p>
 			<div id="footer_form">
 				<form name="footer_modal" action="" method="post">
-					<p><span class="footer_verb">Copy It! </span> <input id="copyit_txtbox" type="text" name="copy" readonly="readonly" onfocus="this.select();" onclick="this.focus();this.select();" value="0.html"></p><br />
+					<p><span class="footer_verb">Copy It! </span> <input id="copyit_txtbox" type="text" name="copy" readonly="readonly" onfocus="this.select();" onclick="this.focus();this.select();" value="0.php"></p><br />
 					<p><span class="footer_verb">Email it!</span> <input id="fname_txtbox" type="text" name="friends_name" placeholder="Friend's Name"> &nbsp; <input id="femail_txtbox" type="text" name="friends_email" placeholder="Friend's Email"></p><br />
 					<p><span class="footer_verb">Share It!</span> &nbsp; &nbsp; &nbsp; 
-						<a href="0.html" onclick=" window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(href), 'facebook-share-dialog', 'width=626,height=436'); return false;"><img id="face_btn" src="img/modal/facebook_btn.png" alt="facebook" style="width: 28%" /></a> &nbsp; &nbsp; &nbsp; 
+						<a href="0.php" onclick=" window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(href), 'facebook-share-dialog', 'width=626,height=436'); return false;"><img id="face_btn" src="img/modal/facebook_btn.png" alt="facebook" style="width: 28%" /></a> &nbsp; &nbsp; &nbsp; 
 
 						<script type="text/javascript" src="../platform.twitter.com/widgets.js"></script>
 
@@ -388,7 +399,7 @@
 		</div>
 
 		<div class="right">
-			<a class="ignore-register-modal" href="index.html"><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>
+			<a class="ignore-register-modal" href="index.php"><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>
 		</div>
 
 		<div class="share_text">

@@ -1,32 +1,7 @@
-  <?php
+ <?php
     include 'config/config.php';
 	 $dbObj =	new DBUtility();
-	
-	$msg="Thank You For Being With Us";
-	if(isset($_POST['submit']))
-	{
-	$fname=$_POST['fname'];
-	$lname=$_POST['lname'];
-	$email=$_POST['email'];
-	$password=$_POST['password'];
-
-	$sql="INSERT INTO members_details(first_name,last_name,email_address,password)
-	VALUES ('".$fname."', '".$lname."', '".$email."','".$password."')";
-
-	if (mysql_query($sql)) {
-		echo $msg;
-	} else {
-		echo "Error: " . $sql . "<br>" . mysql_error();
-	}
-	}
-
-
-
-    ?>
-	
-
-
-
+	 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <title>Retailers-Guest</title>
@@ -115,14 +90,13 @@
 	<div id="slider">
 		<div class="wrap">
 			<div class="innerslide">
-
 				<a href="view_retailer9287.html?rid=3184"><img src="upload/macys2.png"  /></a><a href="view_retailer5e19.html?rid=1874913"><img src="upload/Hot%20Summer%20Travel%20Deals%20facebook%20(1).png"  /></a><a href="view_retailer97bb.html?rid=24550"><img src="upload/vitamin%20World.png"  /></a><a href="index.html"><img src="upload/homecbk.png"  /></a><a href="view_retailerdf88.html?rid=36061"><img src="upload/adminbonton.png"  /></a>			</div>
 		</div>
 	</div>
 
 	<div class="home_coupons">
 			<?php
-			$sql="select * from shop";
+			 $sql="select * from shop";
              $res= $dbObj->select($sql);
 			?>
 		<div id="homescroll">
@@ -353,11 +327,11 @@
 			<p class="modal_paragraph">As a member, you get special discounts and cash<br />back from over 1,500 of your favorite retailers.
 			</p>
 
-			<form action="" method="post">
-				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"><br />
-				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"><br />
-				<input class="textbox_guest"  type="text" name="email" placeholder="Email Address"><br />
-				<input class="textbox_guest"  type="password" name="password" placeholder="Password"><br />
+			<form action="form.php" method="post">
+				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"required ><br/>
+				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"required ><br />
+				<input class="textbox_guest"  type="text" name="email" placeholder="Email Address" required ><br />
+				<input class="textbox_guest"  type="password" name="password" placeholder="Password" required ><br />
 				<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
 				<div class="g-recaptcha" data-sitekey="6Lfz3yMTAAAAAFdGtg4wIRfDblwZCahG7ef_rLAK"></div>
 				<input class="modal_btn" type="submit" name="submit" value="TRY IT NOW - IT'S FREE!">

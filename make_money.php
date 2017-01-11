@@ -212,7 +212,7 @@
 								<!--[if !IE 8]>
                                     aaaa
                                 <![endif]-->
-								<p><span id="money_earned" style="display: inline-block; font-size: 14px; margin-top: 15px;">YOU WOULD EARN<br><input style="padding: 10px; width: 180px; color: #1D632F; font-family: 'Roboto Slab',serif; font-size: 14px; margin: 5px; text-align: center;"  id="total" type="text" name="total" value="$2,953.86" /><span id="asterisk"> *</span><br>EACH MONTH!</span>
+								<p><span id="money_earned" style="display: inline-block; font-size: 14px; margin-top: 15px;">YOU WOULD EARN<br><input style="padding: 10px; width: 180px; color: #1D632F; font-family: 'Roboto Slab',serif; font-size: 14px; margin: 5px; text-align: center;"  id="total" type="text" name="total" value="2,953.86" /><span id="asterisk"> *</span><br>EACH MONTH!</span>
 								</p>
 							</form>
 						</div>

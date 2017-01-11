@@ -4,7 +4,7 @@
 $data['db']['host'] = 'localhost';
 $data['db']['user'] = 'root';
 $data['db']['password'] = '';
-$data['db']['name'] = 'cash';
+$data['db']['name'] = 'cashback';
 
 //----------class started-----------
 

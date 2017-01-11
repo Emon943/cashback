@@ -5,6 +5,7 @@
 <head>
 		<!-- Facebook Like Thumbnail -->
 		<meta property="og:title" content="Join Today!" />
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 		<meta property="og:description" content="Right Now!" />
 		<meta property="og:url" content="make_money.php" />
 		<meta property="og:image" content="images/fb_logo.png" />
@@ -206,13 +207,13 @@
 									<input class="textbox_getpaid" type="text" id="num_shoppers" name="num_shoppers" onchange="setTotal()" value="3" /> shoppers, and those shoppers</p>
 								<p>beneath you <strong>sign up an average</strong> of
 									<input class="textbox_getpaid" id="avg_num_shoppers" type="text" name="avg_num_shoppers" onchange="setTotal()" value="3" /> shoppers, </p>
-								<p> and everyone <strong>spends an average $</strong>
+								<p> and everyone <strong>spends an average £</strong>
 									<input class="textbox_getpaid" id="avg_spent" type="text" name="avg_spent" onchange="setTotal()" value="120" /> a month </p>
 								<img src="img/images/guest/divider.png" alt="divider">
 								<!--[if !IE 8]>
                                     aaaa
                                 <![endif]-->
-								<p><span id="money_earned" style="display: inline-block; font-size: 14px; margin-top: 15px;">YOU WOULD EARN<br><input style="padding: 10px; width: 180px; color: #1D632F; font-family: 'Roboto Slab',serif; font-size: 14px; margin: 5px; text-align: center;"  id="total" type="text" name="total" value="2,953.86" /><span id="asterisk"> *</span><br>EACH MONTH!</span>
+								<p><span id="money_earned" style="display: inline-block; font-size: 14px; margin-top: 15px;">YOU WOULD EARN<br><input style="padding: 10px; width: 180px; color: #1D632F; font-family: 'Roboto Slab',serif; font-size: 14px; margin: 5px; text-align: center;"  id="total" type="text" name="total" value="£ 2,953.86" /><span id="asterisk"> *</span><br>EACH MONTH!</span>
 								</p>
 							</form>
 						</div>

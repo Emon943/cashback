@@ -15,7 +15,7 @@
 	VALUES ('".$fname."', '".$lname."', '".$email."','".$password."')";
 
 	if (mysql_query($sql)) {
-		echo $msg;
+
 	} else {
 		echo "Error: " . $sql . "<br>" . mysql_error();
 	}

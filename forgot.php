@@ -210,7 +210,7 @@
 							</li>
 													</ul>
 						
-						<a href="index.html" class="viewalldrop">View All</a>
+						<a href="index.php" class="viewalldrop">View All</a>
 				</div>
 				<div class="favoriteshopsdrop_col">
 						<ul>

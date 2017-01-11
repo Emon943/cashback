@@ -1,35 +1,10 @@
-  <?php
+ <?php
     include 'config/config.php';
 	 $dbObj =	new DBUtility();
-	
-	$msg="Thank You For Being With Us";
-	if(isset($_POST['submit']))
-	{
-	$fname=$_POST['fname'];
-	$lname=$_POST['lname'];
-	$email=$_POST['email'];
-	$password=$_POST['password'];
-
-	$sql="INSERT INTO members_details(first_name,last_name,email_address,password)
-	VALUES ('".$fname."', '".$lname."', '".$email."','".$password."')";
-
-	if (mysql_query($sql)) {
-		echo $msg;
-	} else {
-		echo "Error: " . $sql . "<br>" . mysql_error();
-	}
-	}
-
-
-
-    ?>
-	
-
-
-
+	 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<title>Retailers-Guest</title>
+<title>index-user</title>
 
 <head>
 <!-- Facebook Like Thumbnail -->
@@ -75,54 +50,18 @@
 	}
 </script>
 <div id="header">
-	<div class="wrap">
-		<div id="top_bar">
-						<div class="right">
-				<a onclick="mobileCheck()" style="cursor: pointer;font-size: 14px;" class="md-trigger share_li_link" data-modal="modal-11"> <span id="guest_member_login">Phone +44 (0) 7859 055 647 |  MEMBER LOGIN </span> <span id="guest_share_with">Share with</span> </a>
 
-				<a class="md-trigger" data-modal="modal-10" href="#"  title="Share on Facebook"><img src="img/facebook.png" width="35"  alt="Share on Facebook" align="absmiddle" /></a> 
-				<a class="md-trigger" data-modal="modal-10" href="#" title="Share on Twitter"><img src="img/twitter.png" width="35" alt="Share on Twitter" align="absmiddle" /></a>
-				<a class="md-trigger" data-modal="modal-10" href="#" ><img src="img/googleplus.png" width="35" alt="Share on Google+" align="absmiddle"/></a>
-           </div>
-		</div>
-		<br />
-
-		        <div id="homepage_header_nav" class="clearfix">
-                            <ul style="color:#fff">
-                    <li> <a class="ignore-register-modal" href="save_money.php" class="lo_link"> SAVING MONEY </a> </li>
-                    <li> <a class="ignore-register-modal" href="make_money.php" class="lo_link"> MAKING MONEY </a> </li>
-                    <li> <a class="ignore-register-modal" href="retailers-guest.php" class="lo_link"> VIEW STORES </a> </li>
-                                    </ul>
-                    </div>
-
-		<div id="header_lvl3">
-			<div id="homepage_header_logo">
-				<a class="ignore-register-modal" href="index.php" title="Return to Homepage" class="lo_link"><img src="img/images/guest/logo.png" alt="logo" class="head_logo" /></a>
-
-				<a class="home-icon" href="index.php"><img src="img/home_icon.png" alt="Return to Homepage" title="Return to Homepage"></a>
-			</div>
-
-			<div id="header_caption">
-				The easiest way to <br /> <span class="green_text">SAVE MONEY</span> and <span class="green_text">MAKE MONEY</span><br /> on stuff you already buy!<br /><br > 
-				<span class="try_now">Try it now, It's free!</span>
-			</div>
-		</div>
-
-		<div class="clearfix"></div>
-	</div>
-</div>
 <div id="slidewrap">
 	<div id="slider">
 		<div class="wrap">
 			<div class="innerslide">
-
-				<a href="view_retailer9287.html?rid=3184"><img src="upload/macys2.png"  /></a><a href="view_retailer5e19.html?rid=1874913"><img src="upload/Hot%20Summer%20Travel%20Deals%20facebook%20(1).png"  /></a><a href="view_retailer97bb.html?rid=24550"><img src="upload/vitamin%20World.png"  /></a><a href="index.php"><img src="upload/homecbk.png"  /></a><a href="view_retailerdf88.html?rid=36061"><img src="upload/adminbonton.png"  /></a>			</div>
+				<a href="view_retailer9287.html?rid=3184"><img src="upload/macys2.png"  /></a><a href="view_retailer5e19.html?rid=1874913"><img src="upload/Hot%20Summer%20Travel%20Deals%20facebook%20(1).png"  /></a><a href="view_retailer97bb.html?rid=24550"><img src="upload/vitamin%20World.png"  /></a><a href="index.html"><img src="upload/homecbk.png"  /></a><a href="view_retailerdf88.html?rid=36061"><img src="upload/adminbonton.png"  /></a>			</div>
 		</div>
 	</div>
 
 	<div class="home_coupons">
 			<?php
-			$sql="select * from shop";
+			 $sql="select * from shop";
              $res= $dbObj->select($sql);
 			?>
 		<div id="homescroll">
@@ -167,7 +106,7 @@
                     <li><a href="retailers.php">All Stores</a></li>
                     <ul style='padding-left:0px;margin:0;'>
 					<?php for ($i = 0; $i < count($res); $i++) {?>
-					<li><a href="retailers-guest.php?id=<?php echo $res[$i]["cat_id"];?>"><?php echo $res[$i]["cat_name"];?></a></li>
+					<li><a href="cat_shop.php?id=<?php echo $res[$i]["cat_id"];?>"><?php echo $res[$i]["cat_name"];?></a></li>
 					 <?php } ?>
 					  </ul>       
 					
@@ -186,17 +125,16 @@
 
 <div class="featured_coupons_deals">
 	<h1>Featured Coupons &amp; Deals</h1>
+	<?php
 	
-   
-   <?php
-	$c_id=$_GET["id"];
 	$sql="SELECT * FROM shop
      JOIN category
-     ON shop.cat_id=category.cat_id where shop.cat_id=$c_id";
+     ON shop.cat_id=category.cat_id";
      $res= $dbObj->select($sql);
 	// var_dump($res)
    ?>
-
+   
+  
 
 <table align="center" width="100%" border="0" cellspacing="0" cellpadding="5" class="retailer_list">
 	 
@@ -308,7 +246,7 @@
 </div><!-- .wrap -->
 
 <div id="need_more_cash">
-	<a href="index.php"><img src="images/need_cash_back.png" alt="Need More Cash Back?" /></a><br />
+	<a href="index.html"><img src="images/need_cash_back.png" alt="Need More Cash Back?" /></a><br />
 	<a style="cursor:pointerl;" class="hide_link lo_link">Hide</a>
 </div>
 
@@ -322,7 +260,7 @@
 		<img id="footer_divider" src="img/images/divider.jpg" alt="divider" />
 		
 		<div>
-			<p class="blurb">Use Cash Back Kaboom’s fast and easy invitation methods to invite others. Those you invite will be added to your Shopping Network and you’ll get paid each time they shop - over and over again - forever!*</p>
+			<p class="blurb">Use Cash Back Kaboomâ€™s fast and easy invitation methods to invite others. Those you invite will be added to your Shopping Network and youâ€™ll get paid each time they shop - over and over again - forever!*</p>
 			<div id="footer_form">
 				<form name="footer_modal" action="" method="post">
 					<p><span class="footer_verb">Copy It! </span> <input id="copyit_txtbox" type="text" name="copy" readonly="readonly" onfocus="this.select();" onclick="this.focus();this.select();" value="0.html"></p><br />
@@ -354,11 +292,11 @@
 			<p class="modal_paragraph">As a member, you get special discounts and cash<br />back from over 1,500 of your favorite retailers.
 			</p>
 
-			<form action="" method="post">
-				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"><br />
-				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"><br />
-				<input class="textbox_guest"  type="text" name="email" placeholder="Email Address"><br />
-				<input class="textbox_guest"  type="password" name="password" placeholder="Password"><br />
+			<form action="form.php" method="post">
+				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"required ><br/>
+				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"required ><br />
+				<input class="textbox_guest"  type="text" name="email" placeholder="Email Address" required ><br />
+				<input class="textbox_guest"  type="password" name="password" placeholder="Password" required ><br />
 				<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
 				<div class="g-recaptcha" data-sitekey="6Lfz3yMTAAAAAFdGtg4wIRfDblwZCahG7ef_rLAK"></div>
 				<input class="modal_btn" type="submit" name="submit" value="TRY IT NOW - IT'S FREE!">
@@ -389,7 +327,7 @@
 		</div>
 
 		<div class="right">
-			<a class="ignore-register-modal" href="index.php"><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>
+			<a class="ignore-register-modal" href="index.html"><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>
 		</div>
 
 		<div class="share_text">

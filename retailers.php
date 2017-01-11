@@ -235,13 +235,13 @@
 							</li>
 													</ul>
 						
-						<a href="index.html" class="viewalldrop">View All</a>
+						<a href="index.php" class="viewalldrop">View All</a>
 				</div>
 				<div class="favoriteshopsdrop_col">
 						<ul>
 												</ul>
 
-						<a href="index.html" class="viewalldrop">View All</a>
+						<a href="index.php" class="viewalldrop">View All</a>
 				</div>
 
 				<div class="clear"></div>
@@ -475,7 +475,7 @@
 
 		<div id="alphabet">
 			<ul>
-				<li><a href="retailers.html">All</a></li>
+				<li><a href="retailers.php">All</a></li>
 				<li><a href="retailersa242.html?letter=0-9" >0-9</a></li><li><a href="retailers4cf8.html?letter=A" >A</a></li><li><a href="retailers4efa.html?letter=B" >B</a></li><li><a href="retailers5a75.html?letter=C" >C</a></li><li><a href="retailersb65f.html?letter=D" >D</a></li><li><a href="retailersd155.html?letter=E" >E</a></li><li><a href="retailers7c27.html?letter=F" >F</a></li><li><a href="retailers3a02.html?letter=G" >G</a></li><li><a href="retailers8a77.html?letter=H" >H</a></li><li><a href="retailerse91d.html?letter=I" >I</a></li><li><a href="retailersb4ca.html?letter=J" >J</a></li><li><a href="retailers5e36.html?letter=K" >K</a></li><li><a href="retailersa4ee.html?letter=L" >L</a></li><li><a href="retailers489c.html?letter=M" >M</a></li><li><a href="retailers568c.html?letter=N" >N</a></li><li><a href="retailers3af0.html?letter=O" >O</a></li><li><a href="retailersefcf.html?letter=P" >P</a></li><li><a href="retailers4762.html?letter=Q" >Q</a></li><li><a href="retailers8e97.html?letter=R" >R</a></li><li><a href="retailerscf4a.html?letter=S" >S</a></li><li><a href="retailers3444.html?letter=T" >T</a></li><li><a href="retailers8847.html?letter=U" >U</a></li><li><a href="retailers2290.html?letter=V" >V</a></li><li><a href="retailerse608.html?letter=W" >W</a></li><li><a href="retailers14ee.html?letter=X" >X</a></li><li><a href="retailers2943.html?letter=Y" >Y</a></li><li class="last"><a href="retailersd401.html?letter=Z" >Z</a></li>			</ul>
 		</div>
 
@@ -566,7 +566,7 @@
 							<table width="100%" border="0" cellspacing="0" cellpadding="3" style="float:left;">
 								<tr>
 									<td width="65%" align="left" valign="top" class="no-margin-cell">
-										<a class="retailer_title" href="view_retailer2a1e.html?rid=35761">1-800-BASKETS</a> <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.html?act=add&amp;rid=35761'"><img src="img/images/star.png" border="0" alt="add" /></a>
+										<a class="retailer_title" href="view_retailer2a1e.html?rid=35761">1-800-BASKETS</a> <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.php?act=add&amp;rid=35761'"><img src="img/images/star.png" border="0" alt="add" /></a>
 									</td>
 									<td nowrap="nowrap" width="10%" align="right" valign="top" class="no-content-cell">
 <!-- 										<a class="coupons" href="/view_retailer.php?rid=35761#coupons" title="1-800-BASKETS Coupons">15</a>
@@ -622,7 +622,7 @@
 							<table width="100%" border="0" cellspacing="0" cellpadding="3" style="float:left;">
 								<tr>
 									<td width="65%" align="left" valign="top" class="no-margin-cell">
-										<a class="retailer_title" href="view_retailerad5b.html?rid=39834">1-800-CONTACTS</a> <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.html?act=add&amp;rid=39834'"><img src="img/images/star.png" border="0" alt="add" /></a>
+										<a class="retailer_title" href="view_retailerad5b.html?rid=39834">1-800-CONTACTS</a> <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.php?act=add&amp;rid=39834'"><img src="img/images/star.png" border="0" alt="add" /></a>
 									</td>
 									<td nowrap="nowrap" width="10%" align="right" valign="top" class="no-content-cell">
 <!-- 										<a class="coupons" href="/view_retailer.php?rid=39834#coupons" title="1-800-CONTACTS Coupons">1</a>

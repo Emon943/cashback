@@ -1,0 +1,10 @@
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-width: 640px){
+	.owl-carousel .owl-wrapper, .owl-carousel .owl-item{
+		
+	}
+	.cartWrapper.{
+		position: fixed;
+		right: 0;
+	}
+}

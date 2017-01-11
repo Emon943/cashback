@@ -1,0 +1,601 @@
+@media only screen and (max-width : 768px) {
+	html {
+		box-sizing: border-box;
+	}
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+	body {
+		background: inherit !important;
+	}
+	.wrap, #header_caption {
+		width: 100%;
+	}
+	#leftcol {
+		padding: 0 10px;
+	}
+	.left, .right {
+		float: none;
+	}
+	#fat_stacks {
+		display: none;
+	}
+	#homepage_header_nav {
+		padding: 0;
+		float: none;
+		text-align: center;
+	}
+	#top_bar {
+		padding-top: 0;
+	}
+	#header .left a, #header .right a {
+		position: static;
+	}
+	#homepage_header_logo {
+	    max-width: 130px;
+	    margin: 10px auto;
+	}
+	#homepage_header_logo img {
+		max-width: 100%;
+	}
+	#header_lvl3 {
+		margin-top: 0;
+	}
+	#header_caption {
+		text-align: center;
+		position: static;
+		font-size: 18px;
+	}
+	#header_caption br {
+		display: none;
+	}
+	.save-money #header_caption, .make-money #header_caption {
+		font-size: 30px;
+	}
+	#homepage_header_nav ul li {
+		display: inline-block;
+		margin: 0 10px;
+		padding: 0;
+	}
+	#header_caption .try_now {
+		display: block;
+		margin-top: 5px;
+	}
+	#guest_bg #header {
+		background-image: url("../img/images/guest/header_strip_bg.png");
+		padding: 0 10px;
+		width: auto;
+		height: 315px;
+	}
+	.mejs-mediaelement video {
+		max-width: 100%;
+	}
+	#footer .left, #footer .right {
+		max-width: 100%;
+	}
+	#guest_form {
+		width: 100% !important;
+		position: static !important;
+	}
+	#cbk_arrow {
+		display: none;
+	}
+	#footer .left {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	#footer .right {
+		display: none;
+	}
+	.md-modal, #makemoney_arrow {
+		display: none;
+	}
+	.mejs-poster img {
+		display: block;
+	}
+	#guest_mid {
+		width: 100%;
+		height: auto;
+	}
+	#footer .left a {
+		font-size: 12px;
+	}
+	#paid_form_header img {
+		display: none;
+	}
+	#guest_form input, #guest_form textarea {
+		border: 1px solid #c3c3c3;
+	}
+	#paid_form_header p {
+		display: inline;
+	}
+	#paid_form_header {
+		padding: 0 10px;
+	}
+	#share {
+		width: auto;
+		position: static;
+	}
+	#guest_form {
+		height: auto !important;
+	}
+	#top_bar .right .md-trigger {
+		display: none;
+	}
+	#top_bar .right .md-trigger:first-child {
+	    display: block;
+	    text-align: center;
+	    padding: 10px 0;
+	}
+	#guest_member_login {
+		position: static;
+	}
+	#home_searchbox, #home_searchbox .search_textbox {
+		width: 100%;
+	} 
+	.wrap {
+		width: 100%;
+	}
+	#logged_nav {
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	    height: auto;
+	}
+	.account_dropdown {
+		width: 100%;
+		margin: 0;
+	}
+	#column_left, #column_center, #column_right {
+		width: 100%;
+		float: none;
+	}
+	table td {
+		display: block;
+		width: 100% !important;
+	}
+	#home_searchbox {
+		margin-top: 0;
+	}
+	#logged_nav li, #logged_nav a {
+		position: static;
+		display: inline-block;
+		margin: 0;
+	}
+	#home_searchbox .search_textbox {
+		padding: 0;
+		text-indent: 45px;
+	}
+	#header {
+		background: url(../images/header_bg.jpg) repeat-x 0 0;
+		min-height: 0;
+	}
+	#header .inner {
+		background: none;
+	}
+	.share_text {
+		display: none;
+	}
+	#header #logo {
+	    float: none;
+	    width: 20%;
+	    padding: 5px 0;
+	    margin: 0 auto;
+	}
+	#header #logo img {
+		width: 100%;
+		max-width: 120px;
+	}
+	.share_text {
+		display: none;
+	}
+	.account_menu {
+		float: none;
+		width: 100%;
+	}
+	.account_menu .account_dropdown {
+		float: left;
+		width: 40%;
+		margin-left: 2%;
+	}
+	.account_menu .right {
+		float: right;
+		margin-right: 2%;
+		text-align: right;
+		width: 50%;
+	}
+	.login_signup {
+		float: none;
+	}
+	.welcome_back {
+		display: none;
+	}
+	#home_searchbox {
+		z-index: 1;
+	}
+	.cbk_green {
+		width: auto;
+	}
+	#logged_nav.main_nav {
+	    background: url(../img/bg-pattern.jpg) repeat 0 0;
+	    padding: 20px 0 10px;
+	    margin-top: -15px;
+	}
+	#logged_nav.main_nav li {
+	    width: auto;
+	    height: auto;
+	    padding: 0 !important;
+	}
+	#logged_nav.main_nav a {
+		height: auto;
+	}
+	.balance_info {
+		float: none;
+		color: white;
+	}
+	.mbalance {
+		color: #f8c242;
+	}
+	#need_more_cash {
+		display: none;
+	}
+	#home_searchbox .search_textbox {
+		border: 1px solid #878787;
+	}
+	.nivo-prevNav {
+		left: 0;
+	}
+	.scrollup {
+		display: none !important;
+	}
+	#slidewrap {
+		padding: 20px 0 0;
+		margin: 20px 0 0;
+	}
+	.no-content-cell {
+		display: none !important;
+	}
+	#column_center h1 {
+		margin-bottom: 10px;
+	}
+	.retailer_list td {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		padding: 10px 0;
+	}
+	.retailer_list td.no-margin-cell {
+		margin: 0;
+		padding: 0;
+	}
+	.retailer_list p {
+
+	}
+	.rating {
+		display: block;
+	}
+	#column_center h1 {
+		text-align: center;
+	}
+	.grab_this {
+		float: none;
+		margin: 0 auto;
+	}
+	.share_this_deal {
+		float: none;
+		margin-right: 0;
+	}
+	#column_center .retailer_list p {
+		margin: 10px auto;
+		font-weight: normal;
+		padding: 0 0 5px;
+	}
+	#column_left .expand_contract_mobile:after {
+	    display: block;
+	    content: "+";
+	    border: 1px solid #0a7d2d;
+	    float: right;
+	    font-size: 17px;
+	    padding: 0 2px;
+	    width: 15%;
+	    max-width: 20px;
+	    text-align: center;
+	}
+	#column_left .box .middle {
+		display: none;
+	}
+	#column_left .top.active .expand_contract_mobile:after  {
+		content: "-";
+	}
+	.view_retail_divider {
+		width: 100%;
+		position: static;
+	}
+	#retail_cashback {
+		position: static;
+	}
+	#retail_cashback {
+	    position: static;
+	    border-radius: 0;
+	    width: 100%;
+	    text-align: center;
+	    display: inline-block;
+	}
+	#coupon_tabs_set #tabs {
+		margin: 0;
+	}
+	.banner_left_ads img {
+		width: auto;
+		height: auto;
+	}
+	#column_left .box .bottom {
+		display: none;
+	}
+	.nivoSlider img {
+		max-width: 100%;
+		width: 100% !important;
+		height: auto !important;
+	}
+	.coupon_list td {
+		text-align: center;
+	}
+	.coupon_list tr td:first-child {
+		padding: 10px 0 0px 0px;
+	}
+	#coupon_tabs_set {
+		position: static;
+	}
+	#coupon_tabs_set #tabs {
+		background: #F2B63C;
+		padding: 0 10px;
+	}
+	.retailer_image_link {
+		display: block;
+		padding: 0 10px;
+		width: 100%;
+		text-align: center;
+	}
+	.banner_left_ads img {
+		max-width: 100%;
+	}
+	.coupon_list td {
+		width: 100%;
+	}
+	#tabs_conttainer li {
+		padding-right: 0;
+	}
+	#tabs li a {
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+	#retail_cashback {
+		padding: 7px 0;
+	}
+	.retailview_imagebox, .retailview_imagebox img {
+		width: 100%;
+		border: none;
+		display: none;
+		height: auto;
+	}
+	#shop_now_padding iframe {
+		width: 100%;
+		display: none;
+	}
+	div.cashbackengine_tooltip span {
+		position: static;
+    	width: 100%;
+	}
+	#tabs_container, #coupon_tabs_set #tabs {
+		margin-bottom: 0;
+	}
+	#column_center p {
+		padding: 0 10px;
+	}
+	.td_coupon br {
+		display: none;
+	}
+	#coupon_tabs_set #sortby_label {
+		padding-right: 0;
+	}
+	#tabs_container ul li {
+		padding-right: 0;
+	}
+	.feat_stores {
+		width: 100%;
+	}
+	#alphabet li {
+		display: inline-block;
+	}
+	#login td {
+		text-align: center;
+	}
+	h1.pagetitle, #column_center .pagetitle {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#forgot_pass {
+		margin-right: 0;
+	}
+	#footer .powered-by {
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	#profile .textbox, #invite .textbox, #support_form .textbox, #withdraw_money .textbox, #login .textbox {
+		padding: 15px 0;
+		text-indent: 15px;
+	}
+	#login_btn, .gold_btn, #forgot .submit {
+		margin: 0 auto;
+	}
+	#social_icons {
+		float: none;
+	}
+	.slicknav_menu {
+		background: #0c742c;
+	}
+	.slicknav_menu .slicknav_btn {
+		background: white url(../img/menu_icon.png) no-repeat 5px center;
+		color: #523b06;
+		border: 1px solid white;
+		padding: 5px 5px 5px 30px;
+		margin: 5px 10px;
+		float: right;
+		font-weight: 700;
+	}
+	#header, .slicknav_nav {
+		clear: both;
+	}
+	.slicknav_menu:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.slicknav_nav {
+		margin: 0;
+		padding: 0 0 10px 10px;
+	}
+	.slicknav_nav li {
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	.slicknav_nav a {
+		color: white;
+	}
+	#alphabet {
+		height: auto;
+	}
+	#alphabet li a {
+		position: static;
+	}
+	#column_left, #column_center, #column_right {
+		padding-top: 10px;
+	}
+	.td_coupon .left {
+		width: 100% !important;
+	}
+	.td_coupon .left, .td_coupon .right {
+		text-align: center;
+	}
+	div.pagination a {
+		display: inline-block;
+	}
+	#guest_share_with {
+		display: none;
+	}
+	#guest_member_login {
+		color: #F9C241;
+		width: 100%;
+		text-align: center;
+	}
+	#guest_bg #guest_member_login {
+		color: black;
+	}
+	#homepage_header_nav ul li {
+		position: static;
+	}
+	#profile .leftcol, #profile .rightcol {
+		width: 100%;
+		float: none;
+		margin-bottom: 15px;
+	}
+	#profile .textbox, #invite .textbox, #support_form .textbox, #withdraw_money .textbox, #login .textbox {
+		width: 100%;
+	}
+	#terms_divider {
+		width: 100%;
+		position: static;
+	}
+	#term_nav ul {
+		margin: 0;
+		padding: 0;
+	}
+	#term_nav span {
+		display: block;
+		width: 100%;
+	}
+	.grab_this {
+		width: 80%;
+	}
+	.owl-carousel .owl-wrapper, .owl-carousel .owl-item img {
+		width: 100%;
+		left: 0;
+		height: auto;
+	}
+	.td_coupon .more {
+		display: none;
+	}
+	.carousel_imagebox {
+		width: 100%;
+		padding: 0;
+		height: auto;
+		margin: 0;
+		left: 0;
+		top: 0;
+	}
+	.feat_stores {
+		height: auto !important;
+	}
+	img {
+		max-width: 100%;
+	}
+	#invite {
+		margin-left: 0;
+	}
+	#footer .share_text {
+		display: block;
+		text-align: center;
+	}
+	#footer .share_text a {
+		display: inline-block;
+	}
+	#modal-10.md-show {
+		display: block;
+	}
+	#modal-10 {
+	    width: 90%;
+	    min-width: 0;
+	}
+	#modal-10 {
+		left: 5%;
+	}
+	#modal-10 .modal_paragraph {
+		padding: 0 10px;
+	}
+	.coupon_boxed {
+		margin: 0 auto;
+	}
+	.mobile_hide {
+		display: none;
+	}
+	#modal-10 input[type="text"], #modal-10 input[type="password"], #modal-10 .modal_btn {
+		width: 90%;
+		margin: 5px auto;
+	}
+	.md-close {
+		right: -5%;
+	}
+	.grab_this .grab_text {
+		display: block;
+	}
+	.banner_left_ads {
+		display: none;
+	}
+	.save-money #rightcol, .make-money #rightcol {
+		width: 100%;
+	}
+	.save-money #rightcol div, .make-money #rightcol div {
+		right: inherit !important;
+	}
+	.save-money #wistia-4ldqdusmxa-1, .make-money #wistia-4ldqdusmxa-1 {
+		display: block !important;
+		text-align: center;
+	}
+	.save-money .mast-img, .make-money .mast-img {
+		background-attachment: inherit;
+		background-size: cover;
+	}
+	#header_caption .try_now {
+		display: none;
+	}	

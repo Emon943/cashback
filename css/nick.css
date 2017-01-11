@@ -1,0 +1,1011 @@
+/*----------------------------------------
+			CashbackEngine
+	http://www.cashbackengine.net
+----------------------------------------*/
+
+/*----------------------------------------
+
+Font Guide for comp substitutions:
+
+	- Adelle Basic - Roboto Slab
+		- font-family: 'Roboto Slab', serif;
+	- Trade Gothic LT Bold Cndn - Open Sans Condensed Bold
+		- font-family: 'Open Sans Condensed', sans-serif;
+	- Trade Gothic (non-condensed) - Open Sans
+		- font-family: 'Open Sans', sans-serif;
+	- Open Sans Stays as is
+
+
+
+Colors:
+
+	- Mid-Green (Headlines & Green BG): #0c742c;
+	- Header Yellow: #f8c242;
+	- Header Brown: #523b06;
+	- Body Copy (General): #616161;
+
+Structure:
+
+	- .wrap (will be direct child in most top level elements)
+	- #header
+		- #links
+		- .wrap
+			- #logo
+			- #menu
+		- #searchbox
+
+	- .wrap
+		- #column_left
+		- #column_center
+		- #column_right
+
+	- #footer
+
+
+----------------------------------------*/
+
+body {
+	background: url(../images/bg.jpg) repeat 0 0;
+	font-family: 'Open Sans',Tahoma,Verdana,Arial,Helvetica,sans-serif;
+	font-size: 11px;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+}
+.store_border img{
+	border: solid;
+	border-color: #CCCFBE;
+	border-width: 1px;
+	border-radius: 3px;
+/*	position: relative;
+	bottom: 12px;*/
+}
+.cbk_green{
+    font-family: 'Tahoma', 'Verdana', serif;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: #097E2D !important;
+}
+/*ACCOUNT*/
+.section{
+	color: #097D2C;
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+}
+.usermenu_active{
+    background: #D3D3CB;
+    margin-left: -10px;
+    padding-left: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 210px;
+    background-image: url('../img/images/green_right_arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+/*END ACCOUNT*/
+
+/*FOOTER*/
+.md-modal{
+	background-color: #E9E9DD;
+	padding-bottom: 25px;
+}
+#modal-8{
+	position: absolute;
+}
+.blurb{
+    position: relative;
+    width: 339px;
+    left: 160px;
+    font-size: 13px;
+}
+.md-content #footer_logo{
+	position: absolute;
+}
+.md-content h3{
+	color: #0C7D2B;
+    position: relative;
+    width: 339px;
+    left: 160px;
+}
+.md-content p{
+	color: #989795;
+	font-style: 13px !important;
+}
+.md-content hr{
+	color: #F8C341;
+    left: 13px;
+    position: relative;
+    width: 414px;
+}
+#face_btn{
+    left: 37px;
+    position: relative;
+    top: 18px;
+}
+#twit_btn{
+	position: relative;
+	left: 47px;
+	top: 18px;
+}
+#footer_form{
+    width: 100%;
+    position: relative;
+    left: 55px;
+}
+.footer_verb{
+	color: #0C7D2B;
+	font-size: 12px;
+	font-family: 'Open Sans',Tahoma,Verdana,Arial,Helvetica,sans-serif;
+}
+#copyit_txtbox{
+	width: 360px;
+	position: relative;
+	left: 60px;
+	padding: 10px;
+	color: #0C7D2B;
+	font-size: 11px;
+}
+#fname_txtbox{
+    left: 58px;
+    position: relative;
+    width: 106px;
+	padding: 10px;
+	color: #0C7D2B;
+	font-size: 11px;
+}
+#femail_txtbox{
+    left: 63px;
+    position: relative;
+    width: 218px;
+	padding: 10px;
+	color: #0C7D2B;
+	font-size: 11px;
+}
+.cbk_green{
+	color: #0A7D2D;
+}
+#footer_divider{
+	left: 160px;
+	position: relative;
+	width: 380px;
+	height: 2px;
+}
+/*END FOOTER*/
+
+/*FAQ PAGE*/
+#faq{
+	width: 610px;
+	position: relative;
+}
+#faq_nav{
+    margin-left: -25px;
+}
+#faq_nav ul li{
+    margin-top: 25px;
+    display: inline;
+}
+#faq_divider{
+    position: absolute;
+    top: 40px;
+    width: 611px;
+    height: 2px;
+}
+#faq p{
+    color: #606060;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0;
+    position: relative;
+    top: 8px;
+    width: 595px;
+    font-family: 'Open Sans', serif;
+    font-weight: 400;
+}
+.redfaq{
+    color: #E94E4E;
+    text-decoration: underline;
+}
+/*END FAQ PAGE*/
+
+/*CONTACT PAGE*/
+#contact{
+    width: 600px;
+}
+#contact p{
+    margin-left: 7px;
+    margin-bottom: 15px;
+    color: #606060;
+    font-size: 15px;
+    font-family: 'Open Sans',Times,"Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+    font-weight: normal;
+}
+#contact_divider{
+	width: 590px;
+	height: 2px;
+	position: relative;
+	right: -6px;
+	bottom: 20px;
+}
+
+#contact_us_button{
+    background-color: #F2BA3F;
+    border-color: #DADBD5;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 5px;
+    color: #614C0D;
+    font-family: 'Roboto Slab',serif;
+    font-size: 19px;
+    margin-top: 10px;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    width: 281px;
+}
+/*END CONTACT PAGE*/
+
+/*RETAILERS*/
+#retailers h1{
+	text-transform: capitalize;
+}
+#retailers h3{
+	background-color: #0D742D;
+}
+.feat_stores{
+	background-color: #E9E9DD !important;
+	height: 180px !important;
+    width: 720px;
+}
+.thumbnail-text a{
+	color: #FABC43;
+    text-decoration: none;
+}
+#store_list{
+	padding: 0px;
+	padding-top: 12px;
+	margin-right: 8px;
+}
+#store_list img{
+	position: relative;
+	left: 0px;
+}
+.deal{
+	position: relative;
+	top: 10px;
+	right: 10px;
+}
+.jscarousal-contents-horizontal .thumbnail-text{
+/*	position: relative;
+	right: 21px;*/
+}
+/*END RETAILERS PAGE*/
+
+/*VIEW RETAILER*/
+#view_retailer h1{
+	text-transform: capitalize;
+}
+#retail_cashback{
+    background-color: #0E742A;
+    border-radius: 5px 5px 5px 5px;
+    color: #00ACED;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.view_retail_divider{
+	position: relative;
+	top: -27px !important;
+	height: 2px;
+}
+/*.retailview_imagebox{
+	background-image: url("/img/images/green_pattern.jpg");
+    border-bottom: 1px solid #E8E9DC;
+    float: left;
+    height: 253px;
+    margin-right: 0;
+    padding-bottom: 9px;
+    padding-left: 5px;
+    padding-right: 0;
+    padding-top: 20px;
+    width: 337px;
+    margin-bottom: 14px;
+}
+*/
+.retailview_imagebox {
+    height: 280px;
+    overflow: hidden;
+    border: 3px solid #F1B539;
+    width: 337px;
+}
+.retailview_imagebox img {
+	width: 337px;
+    border-radius: 5px 5px 5px 5px;
+}
+#retailerview_description p {
+    color: #097E2D;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 12px;
+    margin-top: 0;
+    position: absolute;
+    top: 85px;
+    width: 369px;
+}
+#shop_now{
+	color: #E9B83F;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    top: 6px;
+    font-family: 'Roboto Slab',Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+}
+.retail_shop img, .search_result_img img {
+    border: 1px solid #CCCFBE;
+    border-radius: 3px 3px 3px 3px;
+}
+
+#shop_now_padding a{
+    color: #E9B83F;
+    font-family: 'roboto slab', serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 46px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#column_center .viewretailer_description{
+	color: #606060;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: 'Open Sans',Times,"Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+}
+.viewretailer_go2store{
+    background-color: #0D742D;
+    border-radius: 10px 10px 10px 10px;
+    bottom: 56px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    left: 380px;
+    padding: 23px;
+    position: relative;
+    top: 23px;
+}
+#sortby_label{
+	color: #05591B;
+	font-family: 'Roboto Slab',serif;
+	font-size: 8px;
+	font-weight: bold;
+}
+#retailview_sortby ul li{
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}
+#sortby_list{
+	display: inline;
+	list-style-type: none;
+}
+#retailview_sortby ul li a{
+	color: black;
+	text-decoration: none;
+    padding: 5px;
+}
+#retailview_sortby ul li a:hover{
+	background-color: #0A742A;
+	color: white;
+	font-weight: bold;
+}
+#retailview_sortby{
+	position: relative;
+	bottom: 15px;
+}
+.retailview_cashback{
+	color: #E4BB47 !important;
+	font-weight: bold;
+	position: absolute;
+	left: 8px;
+	top: 12px;
+}
+.retailview_deal{
+	position: relative;
+	top: 6px;
+}
+.coupon_imagebox{
+	background: none repeat scroll 0 0 white;
+    border-bottom: 1px solid #E8E9DC;
+    float: left;
+    height: 90px;
+    margin-left: -15px;
+    margin-right: 0;
+    padding-bottom: 9px;
+    padding-left: 5px;
+    padding-right: 0;
+    padding-top: 20px;
+    width: 165px;
+    margin-bottom: 14px;
+    position: relative;
+    top: 15px; 
+    left: 10px;
+}
+.td_coupon img{
+    border: 0px solid #CCCFBE;
+    border-radius: 3px 3px 3px 3px;
+}
+/*END VIEW RETAILER*/
+
+/*COUPONS PAGE*/
+.feat_coupons{
+	background-color: #E9E9DD !important;
+	height: 215px !important;
+}
+#coupons h3{
+	background-color: #0D742D;
+}
+.coupons_go2store{
+    background-color: #0D742D;
+    border-radius: 10px 10px 10px 10px;
+    bottom: 56px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    left: 580px;
+    padding: 23px 17px;
+    position: relative;
+    top: 33px;
+}
+#coupon_tabs_set{
+	position: relative;
+	right: 28px;
+}
+/*END COUPONS PAGE*/
+
+/*MY SHOPPING PAGE*/
+#network_page p {
+    color: #606060;
+    font-size: 15px;
+}
+#column_center #network_page p {
+    font-weight: normal;
+}
+#network_table_1{
+    border: 1px solid #CCCFBE;
+    border-radius: 3px 3px 3px 3px;
+    background: #FAFAFA;
+}
+#network_table_1 td{
+	color: #097D2C;
+}
+#network_table_2 td{
+	color: #097D2C;
+}
+.network_col_header{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #097D2C;
+    font-family: 'Roboto slab',serif;
+    font-size: 12px;
+    padding-left: 0;
+    text-align: left !important;
+}
+#network_divider{
+	position: relative;
+	top: -20px;
+}
+#shopper_refer_btn, #shopper_lvl_btn, #click_hist_btn, #payment_hist_btn, #recent_activity_btn, #shopper_btn, #makemoney_btn, #cashback_btn, #eligibility_btn, #topshop_btn, #topmake_btn{ /*THESE BUTTONS START OUT AS 'INACTIVE'*/
+    border: 1px solid #CCCFBE;
+    color: #097D2C;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    top: 8px;
+    cursor: pointer;
+}
+#shopper_refer_btn, #recent_activity_btn, #topshop_btn{/*THESE BUTTONS START OUT OF 'ACTIVE'*/
+	background: #D5D3C6;
+}
+#network_choices{
+	float: right;
+}
+#network_page h1{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+#network_page .network_header h1, #network_page .table_head_border {
+    margin-bottom: 10px;
+}
+.network_header {
+    margin-bottom: 30px;
+}
+#shopping_divider{
+    left: 52px;
+    position: relative;
+    width: 613px;
+}
+.table_head_border {
+    border-bottom: 1px solid #F8C242;
+    padding-bottom: 5px;
+    width: 100%;
+}
+#shopping_choices{
+    float: right;
+}
+#shopping_choices a{
+    background: none repeat scroll 0 0 #F9F9F7;
+    border: 1px solid #CCCFBE;
+    border-radius: 3px 3px 3px 3px;
+    color: #097D2C;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    top: 8px;
+}
+.my_account_table td, .my_account_table th {
+    padding:5px;
+}
+.my_account_table {
+    padding: 10px;
+}
+/*END MY SHOPPING*/
+
+/*FAVORITES PAGE*/
+.fav_box{
+    font-family: 'Open Sans', serif;
+    background: none repeat scroll 0 0 white;
+    float: left;
+    margin-left: 2%;
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    width: 222px;
+    height: 248px;
+    border: 1px solid #CCCFBE;
+    border-radius: 3px 3px 3px 3px;
+    position: relative;
+}
+.fav_cashback a{
+    color: #F8C242;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.fav_shop{
+    background: none repeat scroll 0 0 #F1B539;
+    color: white;
+    float: left;
+    font-family: 'Open Sans Condensed', serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 38px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    width: 50%;
+}
+.fav_shop a{
+    color: white;
+    text-decoration: none;
+    padding: 25px 36px;
+}
+.fav_deals{
+    background: none repeat scroll 0 0 #238A43;
+    color: white;
+    float: left;
+    font-family: 'Open Sans Condensed', serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 38px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    width: 50%;
+}
+.fav_deals a{
+    color: white;
+    text-decoration: none;
+    padding: 25px 19px;
+}
+.fav_title{
+    position: absolute;
+    left: 2px;
+}
+.fav_title a{
+    color: black;
+    padding-bottom: 10px;
+    padding-top: 3px;
+    text-decoration: none;
+}
+.un_fav{
+    position: absolute;
+    right: 5px;
+}
+.fav_cashback {
+    display: inline-block;
+    padding-top: 10px;
+}
+.fav_divider{
+    width: 222px;
+    height: 1px;
+    margin-top: 6px;
+    margin-bottom: 9px;
+}
+.empty_box{
+    width: 222px;
+    height: 248px;
+    background: #E4E5D7;
+    font-family: 'Open Sans', serif;
+    float: left;
+    margin-left: 2%;
+    margin-bottom: 20px;
+    color: #CECEC2;
+    border: 1px solid #CCCFBE;
+    border-radius: 3px 3px 3px 3px;
+}
+.plus_sign{
+    background-image: url("../img/images/plus.png");
+    height: 69px;
+    width: 68px;
+    margin: auto;
+}
+.add_store a{
+    color: #C2C3B7;
+    cursor: pointer;
+    font-family: 'roboto slab',serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 118px 52px 100px;
+    text-align: center;
+    text-decoration: none;
+}
+.store_text{
+    margin-top: 32px;
+}
+#modal-9{
+    width: 360px;
+    border: solid;
+    border-color: #FFB81E;
+    border-radius: 5px;
+}
+#storefinder_header{
+    background-color: #F1F1E9;
+    border-bottom: 1px solid #ABA9AA;
+    border-color: #ABA9AA;
+    border-width: 1px;
+    color: #216029;
+    font-family: 'roboto slab',serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-align: center;    
+}
+#store_blurb{
+    color: black;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+#storefind_box{
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-left: 13px;
+    padding-top: 5px;
+    position: relative;
+    right: 34px;
+    width: 306px;
+    color: #B7B7B7;
+}
+/*END FAVORITES PAGE*/
+
+/*LOGIN PAGE*/
+#login .textbox, #login select. #forgot .textbox {
+    background: none repeat scroll 0 0 #F5F5F4;
+    border: 1px solid #B7B7B7;
+    border-radius: 5px 5px 5px 5px;
+    color: #1B6331;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    padding: 15px 10px;
+    width: 260px;
+}
+#login select {
+    width: 282px;
+}
+#login_btn, .gold_btn, #forgot .submit{
+    background-color: #00ACED;
+    border-color: #DADBD5;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 5px;
+    color: #614C0D; 
+    cursor: pointer;
+    display: block;
+    font-family: 'Roboto Slab',serif;
+    font-size: 19px;
+    margin-top: 10px;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    text-align: center;
+    width: 290px;
+}
+#login_divider{
+    bottom: 20px;
+    height: 2px;
+    position: relative;
+    right: -6px;
+    width: 290px;
+}
+#forgot_pass{
+    color: #097E2D;
+    font-family: 'Tahoma','Verdana',serif;
+    font-size: 12px;
+    margin-right: 35px;
+    text-decoration: underline;
+}
+/*END LOGIN PAGE*/
+
+/*FORGOT PASS PAGE*/
+#forgot p{
+    color: #606060;
+    font-size: 15px;
+    font-family: 'Open Sans',Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    font-weight: normal;
+}
+#forgot .textbox{
+    background: none repeat scroll 0 0 #F5F5F4;
+    border: 1px solid #B7B7B7;
+    border-radius: 5px 5px 5px 5px;
+    color: #1B6331;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    padding: 15px 10px;
+    width: 260px;
+}
+#send_pass_btn{
+    background-color: #F2BA3F;
+    border-color: #DADBD5;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 5px;
+    color: #614C0D;
+    font-family: 'Roboto Slab',serif;
+    font-size: 19px;
+    margin-top: -22px;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+    width: 260px;
+}
+#forgot_title{
+    color: #0A7D2D;
+    font-family: 'Roboto Slab',georgia,'times new roman',serif;
+    text-transform: uppercase;
+}
+#forgot_divider{
+    bottom: 5px;
+    height: 2px;
+    position: relative;
+    right: -6px;
+    width: 756px;
+}
+/*END FORGOT PASS PAGE*/
+
+/*INVITE PAGE*/
+/*#invite .textbox{
+    background: none repeat scroll 0 0 #F5F5F4;
+    border: 1px solid #B7B7B7;
+    border-radius: 5px 5px 5px 5px;
+    color: #1B6331;
+    font-size: 16px;
+    margin-bottom: -9px;
+    margin-left: 5px;
+    padding: 8px 10px;
+    width: 200px;
+}*/
+#send_invite_btn{
+    background-color: #F2BA3F;
+    border-color: #DADBD5;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 5px;
+    color: #614C0D;
+    font-family: 'Roboto Slab',serif;
+    font-size: 19px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+    width: 590px;
+}
+#login_divider {
+    bottom: 20px;
+    height: 2px;
+    position: relative;
+    right: -6px;
+    width: 585px;
+}
+/*END INVITE PAGE*/
+
+/*PROFILE PAGE*/
+#profile .textbox, #invite .textbox, #support_form .textbox, #withdraw_money .textbox, #login .textbox  {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #B7B7B7;
+    border-radius: 0 0 0 0;
+    color: #878787;
+    font-family: 'Open Sans',Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    width: 285px;
+}
+#support_form input[type="submit"] {
+    background-color: #F2BA3F;
+    border-color: #DADBD5;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 5px;
+    color: #614C0D;
+    display: block;
+    font-family: 'Roboto Slab',serif;
+    font-size: 19px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+    width: 400px;
+}
+#support_form .textbox2 {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #B7B7B7;
+    border-radius: 0 0 0 0;
+    color: #878787;
+    font-family: 'Open Sans',Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    width: 378px;
+}
+.profile_btns, .btn{
+    background-color: #F2BA3F;
+    border-color: #DADBD5;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 5px;
+    color: #614C0D;
+    font-family: 'Roboto Slab',serif;
+    font-size: 19px;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+    width: 230px;
+}
+#withdraw_money .profile_btns, .btn {
+    margin-right: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.support_options{
+    width: 50%;
+    float: left;
+    color: #606060;
+    font-size: 15px;
+    font-family: 'Open Sans',Tahoma,Verdana,Arial,Helvetica,sans-serif;
+}
+/*END PROFILE PAGE*/
+.withdraw_directive{
+    color: #0C742C;
+    font-size: 15px;
+    font-weight: 400 !important;
+}
+#withdraw_sub{
+    font-size: 15px !important;
+    color: #606060 !important;
+    font-weight: 400 !important;
+    margin-bottom: 40px !important;
+}
+#smaller_fat_stack{
+    position: absolute;
+    right: 15px;
+    top: 92px;
+}
+#smaller_fat_stack2{
+    position: absolute;
+    right: 15px;
+    top: 96px;
+}
+
+/*TERMS PAGE*/
+#terms p{
+    color: #606060;
+    font-size: 15px;
+    font-weight: normal;
+}
+#term h1{
+    text-align: center;
+}
+#terms_divider{
+    height: 2px;
+    position: absolute;
+    top: 60px;
+    width: 611px;
+}
+#term_nav ul li{
+    display: inline;
+}
+/*END TERMS PAGE*/
+
+/* SQUARED FOUR */
+.squaredFour {
+    display:inline;
+    bottom: 3px;
+    position: relative;
+    left: 10px;
+    width: 0;
+}
+
+.squaredFour label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    border-radius: 4px;
+    left: 0px;
+
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    background: #fcfff4;
+
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.squaredFour label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #333;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.squaredFour label:hover::after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: 0.5;
+}
+
+.squaredFour input[type=checkbox]:checked + label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}

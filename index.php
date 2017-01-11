@@ -36,7 +36,7 @@
 				<div id="guest_form_header">
 					<h2>YOU ARE INVITED!</h2>
 						<p>As a member, you get special discounts and cash back from over 1,500 of your favorite retailers.</p>
-												<form id="signform" action="" method="post">
+							<form id="signform" action="form.php" method="post">
 							<input class="textbox_guest"  type="text" name="fname" placeholder="First Name" value="" /><br />
 							<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name" value="" /> <br />
 							<input class="textbox_guest"  type="text" name="email" id="email" placeholder="Email Address" value="" /> <br />
@@ -100,7 +100,7 @@
 				 so you must sign up before sharing.
 			</p>
 
-			<form action="http://www.cashbackkaboom.com/index.php" method="post">
+			<form action="form.php" method="post">
 				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"><br />
 				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"><br />
 				<input class="textbox_guest"  type="text" name="email" placeholder="Email Address"><br />
@@ -127,10 +127,9 @@
 		<div class="center_text">
 			<div> <img id="shop_modal_img_login" src="img/modal/logo.png" width="40%"> </div>
 			<div id="shop_modal_header"> Member Login </div> <br />
-				<form action="#" method="post">
+				<form action="user/login.php" method="post">
 		            <input class="textbox_guest" type="text" class="textbox" name="username" placeholder="Email Address" value="" size="25" /><br />
 		            <input class="textbox_guest" type="password" class="textbox" name="password" placeholder="Password" value="" size="25" /><br />
-				  	<input type="hidden" name="action" value="login" />
 					<input class="modal_btn" type="submit" class="submit" name="login" id="login" value="Login" /><br />
 					<div id="bottom_line">
 						<div style="float:left; margin-left:20px;">

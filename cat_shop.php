@@ -1,31 +1,8 @@
   <?php
     include 'config/config.php';
 	 $dbObj =	new DBUtility();
-	
-	$msg="Thank You For Being With Us";
-	if(isset($_POST['submit']))
-	{
-	$fname=$_POST['fname'];
-	$lname=$_POST['lname'];
-	$email=$_POST['email'];
-	$password=$_POST['password'];
-
-	$sql="INSERT INTO members_details(first_name,last_name,email_address,password)
-	VALUES ('".$fname."', '".$lname."', '".$email."','".$password."')";
-
-	if (mysql_query($sql)) {
-		echo $msg;
-	} else {
-		echo "Error: " . $sql . "<br>" . mysql_error();
-	}
-	}
-
-
 
     ?>
-	
-
-
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -354,7 +331,7 @@
 			<p class="modal_paragraph">As a member, you get special discounts and cash<br />back from over 1,500 of your favorite retailers.
 			</p>
 
-			<form action="" method="post">
+			<form action="form.php" method="post">
 				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"><br />
 				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"><br />
 				<input class="textbox_guest"  type="text" name="email" placeholder="Email Address"><br />

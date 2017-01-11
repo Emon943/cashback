@@ -8,7 +8,7 @@
 	$fname=$_POST['fname'];
 	$lname=$_POST['lname'];
 	$email=$_POST['email'];
-	$password=$_POST['password'];
+	$password=md5($_POST['password']);
 
 	$sql="INSERT INTO members_details(first_name,last_name,email_address,password)
 	VALUES ('".$fname."', '".$lname."', '".$email."','".$password."')";

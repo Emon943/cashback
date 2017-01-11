@@ -322,7 +322,7 @@ function shop_view(){
            <i class="glyphicon glyphicon-pencil"></i></a>
 		</td>
 		<td>
-		<a href="dashboard.php?id=<?php echo $shop_id; ?>&page=delshop" onclick="return confirm('Are you sure you want to delete this category?');" title="Delete">
+		<a href="dashboard.php?id=<?php echo $shop_id; ?>&page=delshop" onclick="return confirm('Are you sure you want to delete this shop?');" title="Delete">
            <i class="glyphicon glyphicon-trash"></i></a>
 		</td>
 		
@@ -433,6 +433,22 @@ function shop_view(){
 					</div>
 <?php 
 }
+
+?>
+
+<?php
+ function shop_delete(){
+	$dbObj =	new DBUtility();
+	$id = $_GET['id'];
+	 
+   $sql="DELETE FROM shop WHERE shop_id=$id";
+   $ressult = $dbObj->update($sql);
+   
+    echo "<h2 align='center' style='color:#000000'>Successfully Deleted</h2>";
+    echo "<meta http-equiv='refresh' content='1; URL=dashboard.php?page=shopview'>";
+    exit;
+	 
+ }
 
 ?>
 

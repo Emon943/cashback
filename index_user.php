@@ -341,7 +341,7 @@
                         <div id="scrollstores" class="feat_stores">
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=2845214"><img src="http://www.cashbackkaboom.com/img/uploads/bbw61qlrbvhrfjj818v5_1406724941.jpg" width="120" height="65" alt="Decal Girl" title="Decal Girl" border="0" /></a><div style="clear: both"></div> -->
+                                  
                                     <a href="view_retailer56bc.html?rid=2845214"><img src="img/uploads/bbw61qlrbvhrfjj818v5_1406724941.jpg" width="120" height="65" alt="Decal Girl" title="Decal Girl" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -538,7 +538,7 @@
 						 JOIN category
 						 ON shop.cat_id=category.cat_id";
 						 $res= $dbObj->select($sql);
-						// var_dump($res)
+						//var_dump($res)
 					   ?>
 					   
 
@@ -550,7 +550,7 @@
 
                         <tr class="odd">
                             <td width="125" align="center" valign="middle">
-                                <span class="featured" alt="Featured Retailer" title="Featured Retailer"></span> <span class="retail_shop" id="store_list"><a href="view_retailer5816.html?rid=36950"><img src="img/uploads/h17n7e7dao27pdftlcfj_1389186178.png" width="120" height="65" alt="1-800-ANY LENS" title="1-800-ANY LENS" border="0" /></a></span>
+                                <span class="featured" alt="Featured Retailer" title="Featured Retailer"></span> <span class="retail_shop" id="store_list"><a href="<?php echo  $res[$i]["url"];?>"><img src="images/img/<?php echo  $res[$i]["picture"];?>" width="120" height="65" alt="1-800-ANY LENS" title="1-800-ANY LENS" border="0" /></a></span>
                                 <div class='rating'>
                                     <div class='cover'></div>
                                     <div class='progress' style='width: 0%;'></div>
@@ -561,7 +561,7 @@
                                 <table width="100%" border="0" cellspacing="0" cellpadding="3" style="float:left;">
                                     <tr>
                                         <td width="65%" align="left" valign="top" class="no-margin-cell">
-                                            <a class="retailer_title" href="view_retailer5816.html?rid=36950">1-800-ANY LENS</a>
+                                            <a class="retailer_title" href="<?php echo  $res[$i]["url"];?>"><?php echo $res[$i]["name"];?></a>
                                             <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.html?act=add&amp;rid=36950'"><img src="img/images/star.png" border="0" alt="add" /></a>
                                         </td>
                                         <td nowrap="nowrap" width="10%" align="right" valign="top" class="no-content-cell">
@@ -573,7 +573,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="3" valign="middle" align="left" class="no-margin-cell">
-                                            <p class="cbk_green">1-800-AnyLens sells all the name brand contact lenses with a Best Price Guarantee. Easy ordering and fast delivery right to your door makes 1-800-Any-Lens a great source to get all your eye care products.&nbsp;</p>
+                                            <p class="cbk_green"><?php echo $res[$i]["shop_des"];?></p>
                                         </td>
 
                                         <td valign="top" align="left">
@@ -595,20 +595,13 @@
   '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_google.png" alt="Share on Google+" align="absmiddle" /></a>
                                                 &nbsp;&nbsp;
 
-                                                <!-- REMOVED THE ADD TO FAVORITES STAR NEXT TO TWITTER AND FACEBOOK BUTTONS		
-									<div class="cashbackengine_tooltip">
-												<a class="conditions" href="#">Conditions</a> <span class="tooltip"></span>
-											</div>
-
-																				<a class="favorites" href="#" title="Add to favorites" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='/myfavorites.php?act=add&rid=36950'"></a>
-                                      -->
+                                                
                                             </div>
 
                                         </td>
                                     </tr>
                                 </table>
-                                <!-- 							<span class="go2store" onclick="location.href='/go2store.php?id=36950'" target="_blank"><span class="cashback"> Plus 4% Cash Back!</span>  <span class="deal">GRAB THIS DEAL</span> </span> -->
-
+                            
                             </td>
                         </tr>
 						<?php } ?>

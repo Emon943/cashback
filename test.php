@@ -11,7 +11,7 @@
 					<?php for ($i = 0; $i < count($res); $i++) {
 						  $id = $res[$i]["cat_id"];
 						  $link = 'retailers-guest.php?id=' . $id;
-						   $name = $res[$i]['cat_name'];
+						   $name = $res[$i]['cat_namess'];
 						?>
 					
 					<li> <?php echo '<span><a href="' . $link . '">' . $name. '</a></span>';?></li>

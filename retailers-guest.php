@@ -345,7 +345,7 @@
 			<form action="form.php" method="post">
 				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"required ><br/>
 				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"required ><br />
-				<input class="textbox_guest"  type="text" name="email" placeholder="Email Address" required ><br />
+				<input class="textbox_guest"  type="text" name="email_address" placeholder="Email Address" required ><br />
 				<input class="textbox_guest"  type="password" name="password" placeholder="Password" required ><br />
 				<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
 				<div class="g-recaptcha" data-sitekey="6Lfz3yMTAAAAAFdGtg4wIRfDblwZCahG7ef_rLAK"></div>

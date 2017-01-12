@@ -1,6 +1,7 @@
 <?php
-session_start();
-   //$member_id = $_SESSION['member_id'];
+  session_start();
+   $member_id = $_SESSION['member_id'];
+  
     include 'config/config.php';
 	$dbObj =	new DBUtility();
     ?>
@@ -151,7 +152,15 @@ session_start();
                     </div>
 
                     <div class="welcome_back">
-                        <!-- Not Logged In, Show Nothing -->
+                       <?php
+							if ($_SESSION['user'] != "") {
+								?>
+								<div>
+									<?php echo "Welcome " . $_SESSION['first_name'] . "!"; ?>
+								</div>
+								<?php
+							}
+							?>
                     </div>
 
                     <ul id="logged_nav" class="main_nav">
@@ -345,7 +354,6 @@ session_start();
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=3635222"><img src="http://www.cashbackkaboom.com/img/uploads/42dgcnwt44sbp0hbwmg7_1417719147.jpg" width="120" height="65" alt="Office Depot and Office Max" title="Office Depot and Office Max" border="0" /></a><div style="clear: both"></div> -->
                                     <a href="view_retailerf44b.html?rid=3635222"><img src="img/uploads/42dgcnwt44sbp0hbwmg7_1417719147.jpg" width="120" height="65" alt="Office Depot and Office Max" title="Office Depot and Office Max" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">

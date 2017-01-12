@@ -3,17 +3,18 @@ session_start();
 ob_start();    //----Output Buffer------//
 require_once("../config/config.php");
 $dbObj = new DBUtility();
-$email = $_POST['username'];
-$password = md5($_POST['password']);
+$email_address = $_POST["email_address"];
+$password = md5($_POST["password"]);
 
-$sql = "SELECT * FROM members_details WHERE email_address = '$email' and password = '$password'";
+$sql = "SELECT * FROM members_details WHERE email_address = '$email_address' and password = '$password'";
 $res = $dbObj->select($sql);
-
 $count = count($res);
-if ($_POST) {
-    if ($count == 1) {
-        $_SESSION['user'] = $email;
 
+    if ($count == 1) {
+        $_SESSION['user'] = $email_address;
+		$_SESSION['first_name'] = $res[0]["first_name"];
+       $_SESSION['member_id'] = $res[0]["member_id"];
+	   
         header("Location:../index_user.php");
 
 
@@ -31,33 +32,8 @@ if ($_POST) {
 			Wrong Email or Password...Pls Retype UserName & Password Again..
 			</div>";
 
-        echo "<meta http-equiv='refresh' content='3; URL=index.php'>";
+        echo "<meta http-equiv='refresh' content='3; URL=../index_user.php'>";
     }
-}
 
 ?>
-
-
-<?php
-function warningfnc()
-{
-    ?>
-    <div id="welcome">
-        <?php
-        echo "<div style='width:600px;height:40px;background:#f6f6f6;float:left;margin-left:120px;padding-top:10px;
-				border:#660000 1px solid;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:14px; color:#0099CC' 
-				align='center'>";
-        echo "You are not authorised person!";
-        echo "</div>";
-        echo "<div style='clear:both;'></div>";
-        echo "<meta http-equiv='refresh' content='3; URL=index.php'>";
-        ?>
-
-    </div>
-    <?php
-}
-
-?>
-
-
 

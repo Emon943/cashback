@@ -292,7 +292,7 @@
 		<form action="user/login.php" method="post">
         <table id="login" width="95%" align="center" cellpadding="3" cellspacing="0" border="0">
           <tr>
-            <td valign="top"><input type="text" class="textbox" name="username" placeholder="Email Address" value="" size="25" /></td>
+            <td valign="top"><input type="text" class="textbox" name="email_address" placeholder="Email Address" value="" size="25" /></td>
           </tr>
           <tr>
             <td valign="top"><input type="password" class="textbox" name="password" placeholder="Password" value="" size="25" /></td>

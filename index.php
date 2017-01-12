@@ -128,7 +128,7 @@
 			<div> <img id="shop_modal_img_login" src="img/modal/logo.png" width="40%"> </div>
 			<div id="shop_modal_header"> Member Login </div> <br />
 				<form action="user/login.php" method="post">
-		            <input class="textbox_guest" type="text" class="textbox" name="username" placeholder="Email Address" value="" size="25" /><br />
+		            <input class="textbox_guest" type="text" class="textbox" name="email_address" placeholder="Email Address" value="" size="25" /><br />
 		            <input class="textbox_guest" type="password" class="textbox" name="password" placeholder="Password" value="" size="25" /><br />
 					<input class="modal_btn" type="submit" class="submit" name="login" id="login" value="Login" /><br />
 					<div id="bottom_line">

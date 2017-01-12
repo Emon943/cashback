@@ -37,10 +37,10 @@
 					<h2>YOU ARE INVITED!</h2>
 						<p>As a member, you get special discounts and cash back from over 1,500 of your favorite retailers.</p>
 							<form id="signform" action="form.php" method="post">
-							<input class="textbox_guest"  type="text" name="fname" placeholder="First Name" value="" /><br />
+							<input class="textbox_guest"  type="text" name="fname" placeholder="First Name" value="" required/><br />
 							<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name" value="" /> <br />
-							<input class="textbox_guest"  type="text" name="email_address" id="email" placeholder="Email Address" value="" /> <br />
-							<input class="textbox_guest"  id="password" type="password" name="password" placeholder="Create A Password" value="" /><br />
+							<input class="textbox_guest"  type="text" name="email_address" id="email" placeholder="Email Address" value="" required /> <br />
+							<input class="textbox_guest"  id="password" type="password" name="password" placeholder="Create A Password" value="" required/><br />
 							<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
 						   <span onclick="showReferredBox()" id="referred_check">Were you referred by someone ?</span><br /><div id="ref_text" style="display:none;">Please enter the Reference ID number of the person who invited you in the field below. </div>
 							<input style="display:none; margin-left: 15px;" class="textbox_guest" type="text" name="ref" id="ref" value="" />	

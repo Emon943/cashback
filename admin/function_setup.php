@@ -192,6 +192,7 @@ function shop_add()
 		$shop_des= $_REQUEST["shop_des"];
 		$url= $_REQUEST["url"];
 		$picture = $_REQUEST["picture"];
+		$coupon_code = $_REQUEST["coupon_code"];
 		$cashback = $_REQUEST["cashback"];
 		
         if ($_FILES["picture"]["name"] != "") {
@@ -201,8 +202,8 @@ function shop_add()
 	
         }
 		
-       $sql = "insert into shop(name, cat_id, picture, shop_des, url,cashback)
-	   values('$name','$category','$picture','$shop_des','$url','$cashback')";
+       $sql = "insert into shop(name, cat_id, picture, shop_des, url,coupon_code,cashback)
+	   values('$name','$category','$picture','$shop_des','$url','$coupon_code','$cashback')";
        $res = $dbObj->insert($sql);
 		
         echo "<h2 align='center' style='color:#000000'>Successfully Save Category</h2>";
@@ -253,6 +254,10 @@ function shop_add()
 						 <div class="form-group">
                             <label>Shop URL</label>
                             <input class="form-control" name ="url" required/>
+                        </div>
+						<div class="form-group">
+                            <label>Coupon Code</label><span>(Optional)</span>
+                            <input class="form-control" name ="coupon_code"/>
                         </div>
 						<div class="form-group">
                             <label>Cashback in %</label>

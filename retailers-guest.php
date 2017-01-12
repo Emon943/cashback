@@ -230,9 +230,22 @@ function makerequest(email_address) {
 									<td nowrap="nowrap" width="30%" align="right" valign="top" class="no-content-cell"> &nbsp; </td>
 								</tr>
 								<tr>
-									<td colspan="3" valign="middle" align="left">
+							<td colspan="3" valign="middle" align="left">
 										<p class="cbk_green"><?php echo $res[$i]["shop_des"];?>&nbsp;<br /><br /></p>
-																		</td>
+								Coupon Code:
+							<img style="margin-bottom: -4px; margin-left: 10px; z-index: -1" src="images/scisor.png">
+                              <p class="coupon_boxed">
+							  <?php
+							  if($res[$i]["coupon_code"]!=null){
+							  echo $res[$i]["coupon_code"];
+							  }else{
+								  echo 'No Required Coupon';
+							  }
+							  ?>
+							  
+							  </p>							
+																		
+						</td>
 
 									<td valign="top" align="left">
 

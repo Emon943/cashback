@@ -15,7 +15,7 @@
 
 	if (mysql_query($sql)) {
 		echo $msg;
-		header('Location:login.php');
+		header('Location:index_user.php');
 	} else {
 		echo "Error: " . $sql . "<br>" . mysql_error();
 	}

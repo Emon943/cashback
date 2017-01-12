@@ -1,7 +1,5 @@
 <?php
-  session_start();
-   $member_id = $_SESSION['member_id'];
-  
+   session_start();
     include 'config/config.php';
 	$dbObj =	new DBUtility();
     ?>
@@ -153,7 +151,7 @@
 
                     <div class="welcome_back">
                        <?php
-							if ($_SESSION['user'] != "") {
+							if (@$_SESSION['user'] != "") {
 								?>
 								<div>
 									<?php echo "Welcome " . $_SESSION['first_name'] . "!"; ?>
@@ -379,7 +377,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=1455022"><img src="http://www.cashbackkaboom.com/img/uploads/wj3tiunyvzpq4685c006_1410881574.jpg" width="120" height="65" alt="Home Shopping Network" title="Home Shopping Network" border="0" /></a><div style="clear: both"></div> -->
+                                   
                                     <a href="view_retailer4473.html?rid=1455022"><img src="img/uploads/wj3tiunyvzpq4685c006_1410881574.jpg" width="120" height="65" alt="Home Shopping Network" title="Home Shopping Network" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -392,7 +390,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=3449087"><img src="http://www.cashbackkaboom.com/img/uploads/dt7xnam61jwgd91lwkxc_1418677990.jpg" width="120" height="65" alt="Sears" title="Sears" border="0" /></a><div style="clear: both"></div> -->
+                                   
                                     <a href="view_retailer6d2a.html?rid=3449087"><img src="img/uploads/dt7xnam61jwgd91lwkxc_1418677990.jpg" width="120" height="65" alt="Sears" title="Sears" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -405,7 +403,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=409"><img src="http://www.cashbackkaboom.com/img/uploads/2bk87k9iqpvg3lf1zi01_1411662480.jpg" width="120" height="65" alt="Sesame Street" title="Sesame Street" border="0" /></a><div style="clear: both"></div> -->
+                                   
                                     <a href="view_retailer8a92.html?rid=409"><img src="img/uploads/2bk87k9iqpvg3lf1zi01_1411662480.jpg" width="120" height="65" alt="Sesame Street" title="Sesame Street" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -444,7 +442,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=3222324"><img src="http://www.cashbackkaboom.com/img/uploads/6vsiblct337uckueaonq_1417022086.jpg" width="120" height="65" alt="Marvel Store" title="Marvel Store" border="0" /></a><div style="clear: both"></div> -->
+                                    
                                     <a href="view_retailer8a03.html?rid=3222324"><img src="img/uploads/6vsiblct337uckueaonq_1417022086.jpg" width="120" height="65" alt="Marvel Store" title="Marvel Store" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -457,7 +455,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=4057800"><img src="http://www.cashbackkaboom.com/img/uploads/nbivnyw5swdkfm6zwi3e_1415383085.jpg" width="120" height="65" alt="Entertainment Book" title="Entertainment Book" border="0" /></a><div style="clear: both"></div> -->
+                                   
                                     <a href="view_retailere031.html?rid=4057800"><img src="img/uploads/nbivnyw5swdkfm6zwi3e_1415383085.jpg" width="120" height="65" alt="Entertainment Book" title="Entertainment Book" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -470,7 +468,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=2842051"><img src="http://www.cashbackkaboom.com/img/uploads/f2skec3c522di3ciruya_1420650638.jpg" width="120" height="65" alt="TASER" title="TASER" border="0" /></a><div style="clear: both"></div> -->
+                                  
                                     <a href="view_retailercbaf.html?rid=2842051"><img src="img/uploads/f2skec3c522di3ciruya_1420650638.jpg" width="120" height="65" alt="TASER" title="TASER" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -483,7 +481,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=2628179"><img src="http://www.cashbackkaboom.com/img/uploads/ahq3bt3qv5y5cr3udnhr_1406176194.jpg" width="120" height="65" alt="Kmart" title="Kmart" border="0" /></a><div style="clear: both"></div> -->
+                                   
                                     <a href="view_retailerb202.html?rid=2628179"><img src="img/uploads/ahq3bt3qv5y5cr3udnhr_1406176194.jpg" width="120" height="65" alt="Kmart" title="Kmart" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -578,8 +576,8 @@
 
                                         <td valign="top" align="left">
 
-                                            <a href="go2store8199.html?id=36950" target="_blank" class="grab_this">
-                                                <span class="gold">Plus 4% Cashback!</span>
+                                            <a href="<?php echo  $res[$i]["url"];?>" target="_blank" class="grab_this">
+                                                <span class="gold">Plus <?php echo $res[$i]["cashback"];?>% Cashback!</span>
                                                 <br />
                                                 <span class="grab_text">Grab This Deal</span>
                                             </a>

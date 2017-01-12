@@ -34,14 +34,7 @@
 		}
 	</style>
 
-	<!--[if lte IE 9]>
-		<script type="text/javascript" src="/js/placeholder_fix.js"></script>
-	<![endif]-->
 	
-
-	<!--[if lte IE 8]>
-		<link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-	<![endif]-->
 </head>
 <script type="text/javascript">
 	//Redirect to login.php, bypassing the modal, if on a mobile device
@@ -50,6 +43,35 @@
 		    window.location = "login.php";
 		}	
 	}
+</script>
+
+<script>
+function makerequest(email_address) {
+  var xhttp;
+  if (email_address.length == 0) { 
+    document.getElementById("res").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+	  //alert(xhttp.readyState);
+	  //alert(xhttp.status);
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("res").innerHTML = xhttp.responseText;
+	  
+	  if(xhttp.responseText=='Already exist!'){
+		 document.getElementById('c_button').disabled=true; 
+	  }
+	  if(xhttp.responseText=='Avilable'){
+		 document.getElementById('c_button').disabled=false; 
+	  }
+    }
+  }
+  
+   serverpage='email_check.php/'+email_address;
+	xhttp.open("GET",serverpage);
+    xhttp.send();   
+}
 </script>
 <div id="header">
 	<div class="wrap">
@@ -345,11 +367,15 @@
 			<form action="form.php" method="post">
 				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"required ><br/>
 				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"required ><br />
-				<input class="textbox_guest"  type="text" name="email_address" placeholder="Email Address" required ><br />
+				
+				<input type="text" name="email_address" placeholder="Email Address" onblur="makerequest(this.value)" >
+				<span id="res" style="color:red"></span>
+				
 				<input class="textbox_guest"  type="password" name="password" placeholder="Password" required ><br />
 				<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
 				<div class="g-recaptcha" data-sitekey="6Lfz3yMTAAAAAFdGtg4wIRfDblwZCahG7ef_rLAK"></div>
-				<input class="modal_btn" type="submit" name="submit" value="TRY IT NOW - IT'S FREE!">
+				
+				<input class="modal_btn" type="submit" name="submit" id="c_button" value="TRY IT NOW - IT'S FREE!">
 			</form>
 
 			<p id="shop_modal_login_member"> Already a member? <a href="login.php" class="ignore-register-modal">Login Now</a> </p>

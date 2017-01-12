@@ -39,15 +39,14 @@
 							<form id="signform" action="form.php" method="post">
 							<input class="textbox_guest"  type="text" name="fname" placeholder="First Name" value="" /><br />
 							<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name" value="" /> <br />
-							<input class="textbox_guest"  type="text" name="email" id="email" placeholder="Email Address" value="" /> <br />
+							<input class="textbox_guest"  type="text" name="email_address" id="email" placeholder="Email Address" value="" /> <br />
 							<input class="textbox_guest"  id="password" type="password" name="password" placeholder="Create A Password" value="" /><br />
 							<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
-															<span onclick="showReferredBox()" id="referred_check">Were you referred by someone ?</span><br /><div id="ref_text" style="display:none;">Please enter the Reference ID number of the person who invited you in the field below. </div>
+						   <span onclick="showReferredBox()" id="referred_check">Were you referred by someone ?</span><br /><div id="ref_text" style="display:none;">Please enter the Reference ID number of the person who invited you in the field below. </div>
 							<input style="display:none; margin-left: 15px;" class="textbox_guest" type="text" name="ref" id="ref" value="" />	
 
-							<div class="g-recaptcha" data-sitekey="6Lfz3yMTAAAAAFdGtg4wIRfDblwZCahG7ef_rLAK"></div>
 
-							<button id="try_now_btn" type="submit" value="TRY IT NOW - IT'S FREE!"><span style="position: relative; bottom: 10px;">GET STARTED NOW - IT'S FREE!</span></button>
+							<button id="try_now_btn" type="submit" name="submit" value="TRY IT NOW - IT'S FREE!"><span style="position: relative; bottom: 10px;">GET STARTED NOW - IT'S FREE!</span></button>
 							<img id="cbk_arrow" src="img/images/guest/guest_arrow.png" alt="Cash Back Arrow">
 						</form>
 

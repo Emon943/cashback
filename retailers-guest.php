@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/guest.css" />
 	<link rel="stylesheet" type="text/css" href="css/nick.css" />
 	<link rel="stylesheet" type="text/css" href="css/mobile_update.css">
+	<script src="js/custom.js" type="text/javascript"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans:400,700,800|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 	<script src="code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -45,34 +46,7 @@
 	}
 </script>
 
-<script>
-function makerequest(email_address) {
-  var xhttp;
-  if (email_address.length == 0) { 
-    document.getElementById("res").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-	  //alert(xhttp.readyState);
-	  //alert(xhttp.status);
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("res").innerHTML = xhttp.responseText;
-	  
-	  if(xhttp.responseText=='Already exist!'){
-		 document.getElementById('c_button').disabled=true; 
-	  }
-	  if(xhttp.responseText=='Avilable'){
-		 document.getElementById('c_button').disabled=false; 
-	  }
-    }
-  }
-  
-   serverpage='email_check.php/'+email_address;
-	xhttp.open("GET",serverpage);
-    xhttp.send();   
-}
-</script>
+
 <div id="header">
 	<div class="wrap">
 		<div id="top_bar">
@@ -386,8 +360,6 @@ function makerequest(email_address) {
 				
 				<input class="textbox_guest"  type="password" name="password" placeholder="Password" required ><br />
 				<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
-				<div class="g-recaptcha" data-sitekey="6Lfz3yMTAAAAAFdGtg4wIRfDblwZCahG7ef_rLAK"></div>
-				
 				<input class="modal_btn" type="submit" name="submit" id="c_button" value="TRY IT NOW - IT'S FREE!">
 			</form>
 
@@ -440,7 +412,7 @@ function makerequest(email_address) {
 	<!-- classie.js by @desandro: https://github.com/desandro/classie -->
 	<script src="js/classie.js" type="text/javascript"></script>
 
-				<script src="js/loggedout_modal.js" type="text/javascript"></script>
+    <script src="js/loggedout_modal.js" type="text/javascript"></script>
 		
 
 

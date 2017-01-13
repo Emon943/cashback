@@ -1,6 +1,6 @@
  <?php
     include 'config/config.php';
-	 $dbObj =	new DBUtility();
+	$dbObj = new DBUtility();
 ?>
 	
 
@@ -178,6 +178,18 @@
      ON shop.cat_id=category.cat_id";
      $res= $dbObj->select($sql);
 	// var_dump($res)
+	 $item_per_page=2;
+	 $record = count($res);
+	$pages=$record/$item_per_page;
+   $page=(isset($_GET['page']) ? (int)$_GET['page']:$_GET['page']=1);
+   $start=($page-1)*$item_per_page;
+   
+   $sql="SELECT * FROM shop
+     JOIN category
+     ON shop.cat_id=category.cat_id LIMIT $start,$item_per_page";
+     $res= $dbObj->select($sql);
+   
+   
    ?>
    
   
@@ -255,12 +267,19 @@
 			                
 							</table>
 						</td>
-					</tr>		
-					<tr>
-		  <td valign="middle" align="center" colspan="2">
-			<div class='pagination'><span class='disabled'>&#139; Previous</span><span class='curPage'>1</span><a href='index93a8.html?column=&amp;order=&amp;page=2'>2</a><a href='index8da6.html?column=&amp;order=&amp;page=3'>3</a><a href='index9c65.html?column=&amp;order=&amp;page=4'>4</a><a href='indexfadc.html?column=&amp;order=&amp;page=5'>5</a><a href='index0b1c.html?column=&amp;order=&amp;page=6'>6</a><a href='indexdf56.html?column=&amp;order=&amp;page=7'>7</a><a href='index6c1b.html?column=&amp;order=&amp;page=8'>8</a><a href='index1155.html?column=&amp;order=&amp;page=9'>9</a>...<a href='indexd26c.html?column=&amp;order=&amp;page=61'>61</a><a href='index6491.html?column=&amp;order=&amp;page=62'>62</a><a href='index93a8.html?column=&amp;order=&amp;page=2'>Next &#155;</a></div>
+					</tr>	
+
+			  <?php
+		      for ($i = 1; $i <= $pages; $i++) {
+		    ?>	
+			<tr>
+		    <td valign="middle" align="center">
+			<div class='pagination'><span class='curPage'>
+			<?php echo '<a href="?page='.$i.'">'.$i.'</a>';?></span>
+		</div>
 		  </td>
 		</tr>
+		  <?php } ?>
 		</table>
 	</div>
 	 <!-- MEMBER LOGIN MODAL -->
@@ -360,6 +379,7 @@
 				
 				<input class="textbox_guest"  type="password" name="password" placeholder="Password" required ><br />
 				<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
+				
 				<input class="modal_btn" type="submit" name="submit" id="c_button" value="TRY IT NOW - IT'S FREE!">
 			</form>
 

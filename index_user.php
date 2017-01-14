@@ -1,5 +1,6 @@
 <?php
-   session_start();
+    session_start();
+    ob_start();
     include 'config/config.php';
 	$dbObj =	new DBUtility();
     ?>
@@ -159,6 +160,8 @@
 								<?php
 							}
 							?>
+							
+							<?php echo "Your Refferal ID" ." " .$_SESSION['ref_id'] . "!"; ?>
                     </div>
 
                     <ul id="logged_nav" class="main_nav">

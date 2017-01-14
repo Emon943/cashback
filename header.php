@@ -16,7 +16,9 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/guest.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile_update.css">
+	<script src="js/customs.js" type="text/javascript"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans:400,700,800|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+	
 	<script src="/code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="/code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 

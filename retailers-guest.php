@@ -115,7 +115,7 @@
 		<?php for ($i = 0; $i < count($res); $i++) {?>
 		
 					<div>
-		<!--	<a href="/view_retailer.php?rid=7160"><img src="http://www.cashbackkaboom.com/img/uploads/479mzh13ifw1mrkbn82y_1408552930.jpg" width="120" height="65" alt="Dog.com" title="Dog.com" border="0" /></a> -->
+		
 			<a href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>"><img src="images/img/<?php echo $res[$i]["picture"];?>" width="120" height="65" alt="Ejins.com" title="Ejins.com" border="0" /></a>
 			<span class="thumbnail-text">
 				<?php echo $res[$i]["cashback"];?>% Cashback

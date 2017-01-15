@@ -19,7 +19,7 @@
 	 
 
 	if (mysql_query($sql)) {
-		$_SESSION['ref_id'] = $ref_id;
+		$_SESSION['ref_id'] = $fname;
 		header('Location:index_user.php');
 	} else {
 		echo "Error: " . $sql . "<br>" . mysql_error();

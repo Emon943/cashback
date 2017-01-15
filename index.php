@@ -31,23 +31,28 @@
 				<script src="http://fast.wistia.com/embed/medias/nsblkeuv7x.jsonp" async></script><script src="../fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_nsblkeuv7x popover=true popoverContent=link" style="display:inline"><a href="#"><span><img class="video-overlay" src="img/cbk_video_overlay_01.png"><img class="preroll-img" src="img/cbk_video_preroll.gif" alt="Watch Video"></span></a></span>
 			</div>
 		</div>
-		<div id="rightcol" class="right">	
+		<div id="rightcol" class="right">
+
+		
 			<div id="guest_form">
 				<div id="guest_form_header">
 					<h2>YOU ARE INVITED!</h2>
 						<p>As a member, you get special discounts and cash back from over 1,500 of your favorite retailers.</p>
-							<form id="signform" action="form.php" method="post">
+						
+							<form id="signform" action="member.php" method="post">
 							<input class="textbox_guest"  type="text" name="fname" placeholder="First Name" value="" required/><br />
+							
 							<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name" value="" /> <br />
+							
 							<input class="textbox_guest"  type="text" name="email_address" id="email" placeholder="Email Address" value="" required /> <br />
 							<input class="textbox_guest"  id="password" type="password" name="password" placeholder="Create A Password" value="" required/><br />
 							<input type="hidden" name="try_now_btn" id="try_now_btn" value="register" />
 						   <span onclick="showReferredBox()" id="referred_check">Were you referred by someone ?</span><br /><div id="ref_text" style="display:none;">Please enter the Reference ID number of the person who invited you in the field below. </div>
-							<input style="display:none; margin-left: 15px;" class="textbox_guest" type="text" name="ref" id="ref" value="" />	
+						   
+						  <input style="display:none; margin-left: 15px;" class="textbox_guest"  type="text" name="ref" id="ref" onblur="makerequest(this.value)" >
+						  <span id="res" style="color:red"></span>
 
-
-							<button id="try_now_btn" type="submit" name="submit" value="TRY IT NOW - IT'S FREE!"><span style="position: relative; bottom: 10px;">GET STARTED NOW - IT'S FREE!</span></button>
-							<img id="cbk_arrow" src="img/images/guest/guest_arrow.png" alt="Cash Back Arrow">
+							<input class="modal_btn" type="submit" name="submit" id="c_button" value="TRY IT NOW - IT'S FREE!">
 						</form>
 
 <!-- BELOW IS USED FOR SOCIAL REGISTRATION / SIGNUP -->
@@ -179,7 +184,7 @@ jQuery(document).ready(function($){
 				<form name="footer_modal" action="http://www.cashbackkaboom.com/#" method="post">
 					<p><span class="footer_verb">Copy It! </span> <input id="copyit_txtbox" type="text" name="copy" readonly="readonly" onfocus="this.select();" onclick="this.focus();this.select();" value=""></p><br />
 					<p><span class="footer_verb">Email it!</span> <input id="fname_txtbox" type="text" name="friends_name" placeholder="Friend's Name"> &nbsp; <input id="femail_txtbox" type="text" name="friends_email" placeholder="Friend's Email"></p><br />
-					<p><span class="footer_verb">Share It!</span> &nbsp; &nbsp; &nbsp; 
+				<p><span class="footer_verb">Share It!</span> &nbsp; &nbsp; &nbsp; 
 
 
 <a href="#" 

@@ -1,4 +1,4 @@
- <?php
+<?php
     session_start();
     include 'config/config.php';
 	 $dbObj =	new DBUtility();
@@ -10,16 +10,16 @@
 	$lname=$_POST['lname'];
 	$email_address=$_POST['email_address'];
 	$password=md5($_POST['password']);
-	$ref_id=rand(10,100);
+	$ref = $_POST['ref'];
 	
 	
-	$sql="INSERT INTO members_details(first_name,last_name,email_address,password,ref_id)
-	VALUES ('".$fname."', '".$lname."', '".$email_address."','".$password."','".$ref_id."')";
+	$sql="INSERT INTO refferal_member(f_name,l_name,email_address,password,ref_id)
+	VALUES ('".$fname."', '".$lname."', '".$email_address."','".$password."','".$ref."')";
 	
 	 
 
 	if (mysql_query($sql)) {
-		$_SESSION['ref_id'] = $ref_id;
+		
 		header('Location:index_user.php');
 	} else {
 		echo "Error: " . $sql . "<br>" . mysql_error();

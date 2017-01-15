@@ -1,5 +1,6 @@
 <?php
-   session_start();
+    session_start();
+    ob_start();
     include 'config/config.php';
 	$dbObj =	new DBUtility();
     ?>
@@ -157,8 +158,12 @@
 									<?php echo "Welcome " . $_SESSION['first_name'] . "!"; ?>
 								</div>
 								<?php
+							}else{
+								echo "Your Refferal ID" ." " .$_SESSION['ref_id'] . "!";
 							}
 							?>
+							
+							
                     </div>
 
                     <ul id="logged_nav" class="main_nav">
@@ -333,8 +338,8 @@
                             $("#slider_stores").fadeIn(1000)
                         });
                     </script>
-
-                    <h3 class="featured_title">&nbsp;&nbsp;825&nbsp;Featured Stores</h3>
+                   <?php $record = count($res);?>
+                    <h3 class="featured_title">&nbsp;&nbsp;<?php echo $record;?>&nbsp;Featured Stores</h3>
                     <div id="slider_stores">
                         <div id="scrollstores" class="feat_stores">
                             <div>

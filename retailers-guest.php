@@ -117,25 +117,16 @@
 			 $sql="select * from shop";
              $res= $dbObj->select($sql);
 			?>
-<<<<<<< HEAD
-            <div id="homescroll">
-
-                <?php for ($i = 0; $i < count($res); $i++) {?>
-
-                    <div>
-                        <!--	<a href="/view_retailer.php?rid=7160"><img src="http://www.cashbackkaboom.com/img/uploads/479mzh13ifw1mrkbn82y_1408552930.jpg" width="120" height="65" alt="Dog.com" title="Dog.com" border="0" /></a> -->
-                        <a href="view_retailer.php?sid=<?php echo $res[$i][" shop_id "];?>"><img src="images/img/<?php echo $res[$i]["picture"];?>" width="120" height="65" alt="Ejins.com" title="Ejins.com" border="0" /></a>
-                        <span class="thumbnail-text">
-=======
-		<div id="homescroll">
+           
+		     <div id="homescroll">
 		
-		<?php for ($i = 0; $i < count($res); $i++) {?>
+		<?php for ($i = 0; $i < count($res); $i++) {
+			?>
 		
 					<div>
 		
 			<a href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>"><img src="images/img/<?php echo $res[$i]["picture"];?>" width="120" height="65" alt="Ejins.com" title="Ejins.com" border="0" /></a>
 			<span class="thumbnail-text">
->>>>>>> 4835355bb60e313ebccf4254b1242c37ac77aa64
 				<?php echo $res[$i]["cashback"];?>% Cashback
 			</span>
                     </div>
@@ -169,7 +160,7 @@
                             <ul style='padding-left:0px;margin:0;'>
                                 <?php for ($i = 0; $i < count($res); $i++) {?>
                                     <li>
-                                        <a href="cat_shop.php?id=<?php echo $res[$i][" cat_id "];?>">
+                                        <a href="cat_shop.php?id=<?php echo $res[$i]["cat_id"];?>">
                                             <?php echo $res[$i]["cat_name"];?>
                                         </a>
                                     </li>
@@ -231,7 +222,7 @@
                                     <table width="100%" border="0" cellspacing="0" cellpadding="3" style="float:left;">
                                         <tr>
                                             <td width="65%" align="left" valign="top">
-                                                <a class="retailer_title" href="view_retailer.php?sid=<?php echo $res[$i][" shop_id "];?>">
+                                                <a class="retailer_title" href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>">
                                                     <?php echo $res[$i]["name"];?>
                                                 </a>
                                                 <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.php?act=add&amp;rid=773'"><img src="img/images/star.png" border="0" alt="add" /></a>
@@ -284,7 +275,9 @@
                                     </table>
                                 </td>
                             </tr>
-                            <?php } ?>
+                            <?php 
+							}
+							?>
 
             </div>
             <!-- ********************** Above added for Social Sharing ******************** -->
@@ -301,9 +294,12 @@
 		      for ($i = 1; $i <= $pages; $i++) {
 		    ?>
                             <?php echo '<a href="?page='.$i.'">'.$i.'</a>';?>
+							
+							
                                 <?php } ?>
 
                                     <a href=''>Next &#155;</a></div>
+									
                 </td>
             </tr>
             </table>

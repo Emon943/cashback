@@ -111,34 +111,24 @@
             </div>
         </div>
     </div>
-
-    <div class="home_coupons">
-        <?php
+          <?php
 			 $sql="select * from shop";
              $res= $dbObj->select($sql);
 			?>
-           
-		     <div id="homescroll">
-		
-		<?php for ($i = 0; $i < count($res); $i++) {
+          <div class="home_coupons">
+           <div id="homescroll">
+			 <?php for ($i = 0; $i < count($res); $i++) {
 			?>
-		
-					<div>
-		
+			<div>
 			<a href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>"><img src="images/img/<?php echo $res[$i]["picture"];?>" width="120" height="65" alt="Ejins.com" title="Ejins.com" border="0" /></a>
 			<span class="thumbnail-text">
-				<?php echo $res[$i]["cashback"];?>% Cashback
+		  <?php echo $res[$i]["cashback"];?>% Cashback
 			</span>
-                    </div>
-
-                    <?php } ?>
-
+              </div>
+			  <?php } ?>
             </div>
             <div style="clear: both"></div>
-
-            <div class="clear"></div>
-    </div>
-    </div>
+         </div>
 
     <!-- End Homepage Exlusively -->
 
@@ -202,16 +192,16 @@
 
    ?>
 
-                    <table align="center" width="100%" border="0" cellspacing="0" cellpadding="5" class="retailer_list">
+       <table align="center" width="100%" border="0" cellspacing="0" cellpadding="5" class="retailer_list">
 
-                        <?php
+        <?php
 		 for ($i = 0; $i < count($res); $i++) {
 		?>
                             <tr class="odd">
 
-                                <td width="125" align="center" valign="middle">
-                                    <span class="featured" alt="Featured Retailer" title="Featured Retailer"></span>
-                                    <span class="retail_shop" id="store_list"><a href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>" class="md-trigger" data-modal="modal-10"><img src="images/img/<?php echo  $res[$i]["picture"];?>" width="120" height="65" alt="1-800-FLOWERS" title="1-800-FLOWERS" border="0" /></a></span>
+                         <td width="125" align="center" valign="middle">
+                         <span class="featured" alt="Featured Retailer" title="Featured Retailer"></span>
+                         <span class="retail_shop" id="store_list"><a href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>" class="md-trigger" data-modal="modal-10"><img src="images/img/<?php echo  $res[$i]["picture"];?>" width="120" height="65" alt="1-800-FLOWERS" title="1-800-FLOWERS" border="0" /></a></span>
                                     <div class='rating'>
                                         <div class='cover'></div>
                                         <div class='progress' style='width: 0%;'></div>
@@ -238,7 +228,7 @@
                                                         <br />
                                                 </p>
                                                 Coupon Code:
-                                                <img style="margin-bottom: -4px; margin-left: 10px; z-index: -1" src="images/scisor.png">
+                               <img style="margin-bottom: -4px; margin-left: 10px; z-index: -1" src="images/scisor.png">
                                                 <p class="coupon_boxed">
                                                     <?php
 							     if($res[$i]["coupon_code"]!=null){
@@ -247,28 +237,26 @@
 								  echo 'No Required Coupon';
 							   }
 							  ?>
+					</p>
+					</td>
 
-                                                </p>
+                             <td valign="top" align="left">
 
-                                            </td>
+                             <a href="go2store5ddc.html?id=773&amp;c=763034" target="_blank" class="grab_this">
+                                        <span class="gold">Plus <?php echo $res[$i]["cashback"];?>% Cashback!</span>
+                                       <br />
+                                        <span class="grab_text">Grab This Deal</span>
+                             </a>
 
-                                            <td valign="top" align="left">
+         <!-- ********************** Below added for Social Sharing ******************** -->
+        <div class="share_this_deal clear">
+            <span>Share this deal</span>
+               <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fwww.cashbackkaboom.com%2Fview_retailer.php%3Frid%3D773%26ref%3D&amp;p[images][0]=http://www.cashbackkaboom.com/images/header/logo.png&amp;p[title]=1-800-FLOWERS&amp;p[summary]=Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21" target="_blank" onclick="window.open(this.href, '_blank', 'width=400,height=500');return false;"><img src="images/icon_facebook.png" alt="Share on Facebook" /></a>
 
-                                                <a href="go2store5ddc.html?id=773&amp;c=763034" target="_blank" class="grab_this">
-                                                    <span class="gold">Plus <?php echo $res[$i]["cashback"];?>% Cashback!</span>
-                                                    <br />
-                                                    <span class="grab_text">Grab This Deal</span>
-                                                </a>
+               <a href="http://twitter.com/home?status=Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21%20http://www.cashbackkaboom.com/view_retailer.php?rid=773%26ref=" target="_blank" title="Share on Twitter" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_twitter.png" alt="Share on Twitter" /></a>
 
-                                                <!-- ********************** Below added for Social Sharing ******************** -->
-                                                <div class="share_this_deal clear">
-                                                    <span>Share this deal</span>
-                                                    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fwww.cashbackkaboom.com%2Fview_retailer.php%3Frid%3D773%26ref%3D&amp;p[images][0]=http://www.cashbackkaboom.com/images/header/logo.png&amp;p[title]=1-800-FLOWERS&amp;p[summary]=Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21" target="_blank" onclick="window.open(this.href, '_blank', 'width=400,height=500');return false;"><img src="images/icon_facebook.png" alt="Share on Facebook" /></a>
-
-                                                    <a href="http://twitter.com/home?status=Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21%20http://www.cashbackkaboom.com/view_retailer.php?rid=773%26ref=" target="_blank" title="Share on Twitter" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_twitter.png" alt="Share on Twitter" /></a>
-
-                                                    <a href="https://plus.google.com/share?url=The%20Easiest%20Way%20to%20SAVE%20MONEY%20and%20MAKE%20MONEY%20on%20stuff%20you%20already%20buy!%20Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21%20http://www.cashbackkaboom.com/view_retailer.php?rid=773%26ref=" title="Share on Google+" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_google.png" alt="Share on Google+" /></a>
-                                                </div>
+                 <a href="https://plus.google.com/share?url=The%20Easiest%20Way%20to%20SAVE%20MONEY%20and%20MAKE%20MONEY%20on%20stuff%20you%20already%20buy!%20Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21%20http://www.cashbackkaboom.com/view_retailer.php?rid=773%26ref=" title="Share on Google+" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_google.png" alt="Share on Google+" /></a>
+               </div>
                                                 <!-- ********************** Above added for Social Sharing ******************** -->
                                             </td>
                                         </tr>
@@ -298,7 +286,7 @@
 							
                                 <?php } ?>
 
-                                    <a href=''>Next &#155;</a></div>
+                              <a href=''>Next &#155;</a></div>
 									
                 </td>
             </tr>
@@ -311,29 +299,26 @@
                     <div> <img id="shop_modal_img_login" src="img/modal/logo.png" width="40%"> </div>
                     <div id="shop_modal_header"> Member Login </div>
                     <br />
-                    <form action="#" method="post">
-                        <input class="textbox_guest" type="text" class="textbox" name="username" placeholder="Email Address" value="" size="25" />
-                        <br />
-                        <input class="textbox_guest" type="password" class="textbox" name="password" placeholder="Password" value="" size="25" />
-                        <br />
-                        <input type="hidden" name="action" value="login" />
-                        <input class="modal_btn" type="submit" class="submit" name="login" id="login" value="Login" />
-                        <br />
-                        <div id="bottom_line">
-                            <div style="float:left; margin-left:20px;">
-                                <span>Remember Me:</span>
-                                <div class="squaredFour">
-                                    <input type="checkbox" value="None" id="squaredFour" name="remember" />
-                                    <label for="squaredFour"></label>
-                                </div>
-                            </div>
-                            <div id="bottom_line_box2">
-                                <a id="forgot_pass_modal" href="forgot.php" class="ignore-register-modal">Forgot your password?</a>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
+                    <form action="user/login.php" method="post">
+		            <input class="textbox_guest" type="text" class="textbox" name="email_address" placeholder="Email Address" value="" size="25" /><br />
+		            <input class="textbox_guest" type="password" class="textbox" name="password" placeholder="Password" value="" size="25" /><br />
+					<input class="modal_btn" type="submit" class="submit" name="login" id="login" value="Login" /><br />
+					<div id="bottom_line">
+						<div style="float:left; margin-left:20px;">
+							<span>Remember Me:</span>
+							<div class="squaredFour">
+								<input type="checkbox" value="None" id="squaredFour" name="remember" />
+								<label for="squaredFour"></label>
+							</div>
+						</div>
+						<div id="bottom_line_box2">
+							<a id="forgot_pass_modal" href="forgot.php" class="ignore-register-modal">Forgot your password?</a>
+						</div>
+						<div class="clear"></div>
+					</div>
 
-                    </form>
+
+		      </form>
                     <button class="md-close"></button>
                 </div>
             </div>

@@ -1,13 +1,14 @@
- <?php
+<?php
+    session_start();
+    ob_start();
     include 'config/config.php';
-	 $dbObj =	new DBUtility();
+	$dbObj =	new DBUtility();
     ?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-
 <head>
-        <title>Retailers</title>
+        <title>Stores | Cash Back Kaboom</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans:400,700,800|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
@@ -22,13 +23,13 @@
 
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="icon" type="image/ico" href="favicon.ico" />
-        <script src="../jwpsrv.com/library/czgAhjdJEeKuzSIACp8kUw.js"></script>
+        <script src="http://jwpsrv.com/library/czgAhjdJEeKuzSIACp8kUw.js"></script>
         <link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 
-        <link src="../code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
-        <script src="../code.jquery.com/jquery-1.9.1.js"></script>
+        <link src="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="js/viewport.js"></script>
-        <script src="../code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script src="js/jquery.slicknav.js"></script>
 
         <style>
@@ -48,20 +49,7 @@
             }
         </style>
 
-
-        <!--[if lte IE 9]>
-            <script type="text/javascript" src="/js/placeholder_fix.js"></script>
-        <![endif]-->
-    
-
-        <!--[if IE 8]>
-            <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-        <![endif]-->
-
-        <!--[if lt IE 8]>
-            <link rel="stylesheet" type="text/css" href="/css/ie_less.css" />
-        <![endif]-->
-        <script src="../cdn.optimizely.com/js/261957161.js"></script>
+        <script src="/cdn.optimizely.com/js/261957161.js"></script>
 </head>
 
 <body>
@@ -86,7 +74,7 @@
             <div class="share_text">
             <b>Share with</b><a class="md-trigger" data-modal="modal-10" href="#"  title="Share on Facebook"><img src="img/facebook.png" width="35"  alt="Share on Facebook" align="absmiddle" /></a> 
             <a class="md-trigger" data-modal="modal-10" href="#" title="Share on Twitter"><img src="img/twitter.png" width="35" alt="Share on Twitter" align="absmiddle" /></a>
-            <a class="md-trigger" data-modal="modal-10" href="#" ><img src="img/googleplus.png" width="35" alt="Share on Google+" align="absmiddle"/></a>
+            <a class="md-trigger" data-modal="modal-10" href="#" ><img src="img/googleplus.png" width="35" alt="Share on Google+" align="absmiddle"></a>
         </div>
     
             <div class="account_menu">
@@ -94,13 +82,13 @@
 
                                         
                         <div class="login_signup">
-                            <a href="login.php" class="lo_link ignore-register-modal">Log In</a> | <a href="index.php">Sign Up</a>
+                            <a href="login.php" class="lo_link ignore-register-modal">Log In</a> | <a href="register.php">Sign Up</a>
                         </div>
 
                                 </div>
 
             <div class="right">
-                <a href="index.php"><img src="images/header/my_fave_shops.png" alt="My Fave Shops" /></a>
+                <a href="myfavorites.php"><img src="images/header/my_fave_shops.png" alt="My Fave Shops" /></a>
 
 
             </div>
@@ -112,7 +100,7 @@
         <div class="inner">
 
             <a href="#" class="scrollup">Top</a>
-            <div id="logo"><a href="index.php" class="lo_link ignore-register-modal"><img src="images/header/logo.png" alt="Cash Back Kaboom" title="Return to Home Page" border="0" /></a></div>
+            <div id="logo"><a href="" class="lo_link ignore-register-modal"><img src="images/header/logo.png" alt="Cash Back Kaboom" title="Return to Home Page" border="0" /></a></div>
             
             <div class="welcome_back">
                                     <!-- Not Logged In, Show Nothing -->
@@ -120,10 +108,10 @@
 
 
             <ul id="logged_nav" class="main_nav">
-                <li id="shop_nav"><a href="index.php">HOME</a></li>
+                <li id="shop_nav"><a href="">HOME</a></li>
                 <li id="coupons_nav"><a href="coupons.php">COUPONS &amp; DEALS</a></li>
                 <li id="money_nav"><a href="getpaid.php">MAKE MONEY</a></li>
-                <li id="invite_nav"><a href="index.php">INVITE FRIENDS!</a></li>
+                <li id="invite_nav"><a href="invite.php">INVITE FRIENDS!</a></li>
                             </ul>
 
             <div class="clear"></div>
@@ -160,38 +148,38 @@
 					<div class="left">
 						<ul>
 							<li>
-								<a href="retailersc055.html?cat=17"><img src="images/icons/dropdown/books.png" alt="Books Icon" /> <span class="cat_info">Books &amp; Magazines</span></a>
+								<a href="retailers.php?cat=17"><img src="images/icons/dropdown/books.png" alt="Books Icon" /> <span class="cat_info">Books &amp; Magazines</span></a>
 							</li>
 							<li>
-								<a href="retailers3f99.html?cat=16"><img src="images/icons/dropdown/clothin.png" alt="Clothing, Shoes, &amp; Jewelry" /> <span class="cat_info">Apparel</span></a>
+								<a href="retailers.php?cat=16"><img src="images/icons/dropdown/clothin.png" alt="Clothing, Shoes, &amp; Jewelry" /> <span class="cat_info">Apparel</span></a>
 							</li>
 							<li>
-								<a href="retailers6c5d.html?cat=18"><img src="images/icons/dropdown/computer_electronics.png" alt="Computer &amp; Electronics" /> <span class="cat_info">Computer &amp; Electronics</span></a>
+								<a href="retailers.php?cat=18"><img src="images/icons/dropdown/computer_electronics.png" alt="Computer &amp; Electronics" /> <span class="cat_info">Computer &amp; Electronics</span></a>
 							</li>
 							<li>
-								<a href="retailers54cb.html?cat=23"><img src="images/icons/dropdown/home_garden.png" alt="Home &amp; Garden" /> <span class="cat_info">Home &amp; Garden</span></a>
+								<a href="retailers.php?cat=23"><img src="images/icons/dropdown/home_garden.png" alt="Home &amp; Garden" /> <span class="cat_info">Home &amp; Garden</span></a>
 							</li>
 							<li>
-								<a href="retailers97dc.html?cat=33"><img src="images/icons/dropdown/toys_games.png" alt="Toys &amp; Games" /> <span class="cat_info">Toys &amp; Games</span></a>
+								<a href="retailers.php?cat=33"><img src="images/icons/dropdown/toys_games.png" alt="Toys &amp; Games" /> <span class="cat_info">Toys &amp; Games</span></a>
 							</li>
 						</ul>
 					</div>
 					<div class="right">
 						<ul>
 							<li>
-								<a href="retailers9035.html?cat=22"><img src="images/icons/dropdown/health_beauty.png" alt="Health &qmp; Beauty" /> <span class="cat_info">Health &amp; Beauty</span></a>
+								<a href="retailers.php?cat=22"><img src="images/icons/dropdown/health_beauty.png" alt="Health &qmp; Beauty" /> <span class="cat_info">Health &amp; Beauty</span></a>
 							</li>
 							<li>
-								<a href="retailers2d79.html?cat=26"><img src="images/icons/dropdown/movies_music.png" alt="Movies &amp; Music" /> <span class="cat_info">Movies &amp; Music</span></a>
+								<a href="retailers.php?cat=26"><img src="images/icons/dropdown/movies_music.png" alt="Movies &amp; Music" /> <span class="cat_info">Movies &amp; Music</span></a>
 							</li>
 							<li>
-								<a href="retailersede2.html?cat=32"><img src="images/icons/dropdown/sports_outdoors.png" alt="Sports &amp; Outdoors" /> <span class="cat_info">Sports &amp; Outdoors</span></a>
+								<a href="retailers.php?cat=32"><img src="images/icons/dropdown/sports_outdoors.png" alt="Sports &amp; Outdoors" /> <span class="cat_info">Sports &amp; Outdoors</span></a>
 							</li>
 							<li>
-								<a href="retailers4821.html?cat=20"><img src="images/icons/dropdown/flowers_gifts.png" alt="Flowers, Gifts &amp; Gourmet" /> <span class="cat_info">Flowers, Gifts, Gourmet</span></a>
+								<a href="retailers.php?cat=20"><img src="images/icons/dropdown/flowers_gifts.png" alt="Flowers, Gifts &amp; Gourmet" /> <span class="cat_info">Flowers, Gifts, Gourmet</span></a>
 							</li>
 							<li>
-								<a href="retailers489b.html?cat=34"><img src="images/icons/dropdown/travel_auto.png" alt="Travel &amp; Auto" /> <span class="cat_info">Travel &amp; Auto</span></a>
+								<a href="retailers.php?cat=34"><img src="images/icons/dropdown/travel_auto.png" alt="Travel &amp; Auto" /> <span class="cat_info">Travel &amp; Auto</span></a>
 							</li>
 						</ul>
 					</div>
@@ -201,26 +189,26 @@
 						<ul>
 						
 														<li>
-								<a href="view_retailer0e1b.html?rid=1620136"><img src="img/uploads/xdbqbji8uzd0e69btpju_1420659855.jpg" width="100px" height="32px" alt="The Walking Company" title="The Walking Company" border="0" /> <span class="cash_back">4.5% Cash Back</span></a>
+								<a href="view_retailer.php?rid=36693"><img src="http://cashbackkaboom.com/store_logos/lg_36693.jpg" width="100px" height="32px" alt="Shades Shutters Blinds" title="Shades Shutters Blinds" border="0" /> <span class="cash_back">5% Cash Back</span></a>
 							</li>
 														<li>
-								<a href="view_retailer5e19.html?rid=1874913"><img src="img/uploads/imvlbhx0vzkb4ze36pse_1394576239.png" width="100px" height="32px" alt="Expedia" title="Expedia" border="0" /> <span class="cash_back">3% Cash Back</span></a>
+								<a href="view_retailer.php?rid=1836140"><img src="http://www.cashbackkaboom.com/img/uploads/dppck7oa3ib8uyk20a9c_1387300182.png" width="100px" height="32px" alt="Pet Street Mall" title="Pet Street Mall" border="0" /> <span class="cash_back">4% Cash Back</span></a>
 							</li>
 														<li>
-								<a href="view_retailerd0b1.html?rid=2092"><img src="img/uploads/y2pmzq65hnqs287n9cbb_1406175864.jpg" width="100px" height="32px" alt="Target" title="Target" border="0" /> <span class="cash_back">0.0% Cash Back</span></a>
+								<a href="view_retailer.php?rid=1019547"><img src="http://www.cashbackkaboom.com/img/uploads/1100guxt0q80obqa45sv_1389183975.png" width="100px" height="32px" alt="39 Dollar Glasses" title="39 Dollar Glasses" border="0" /> <span class="cash_back">5% Cash Back</span></a>
 							</li>
 														<li>
-								<a href="view_retailerf8a2.html?rid=36437"><img src="img/uploads/dn9k9hlxk6v0gegdwzo2_1411664611.jpg" width="100px" height="32px" alt="UMI Childrens Shoes" title="UMI Childrens Shoes" border="0" /> <span class="cash_back">5% Cash Back</span></a>
+								<a href="view_retailer.php?rid=3092327"><img src="http://www.cashbackkaboom.com/img/uploads/a5oo5ka590m8gx7phk49_1418918429.jpg" width="100px" height="32px" alt="Solstice Sunglasses" title="Solstice Sunglasses" border="0" /> <span class="cash_back">4.8% Cash Back</span></a>
 							</li>
 													</ul>
 						
-						<a href="index.php" class="viewalldrop">View All</a>
+						<a href="" class="viewalldrop">View All</a>
 				</div>
 				<div class="favoriteshopsdrop_col">
 						<ul>
 												</ul>
 
-						<a href="index.php" class="viewalldrop">View All</a>
+						<a href="myfavorites.php" class="viewalldrop">View All</a>
 				</div>
 
 				<div class="clear"></div>
@@ -233,7 +221,7 @@
 
     <div class="wrap">
         <div id="home_searchbox">
-            <form action="http://www.cashbackkaboom.com/search.php" method="get" id="searchfrm" name="searchfrm">
+            <form action="search.php" method="get" id="searchfrm" name="searchfrm">
                 <input type="text" id="searchtext" name="searchtext" class="search_textbox" value="Search for stores..." onClick="if (this.defaultValue==this.value) this.value=''" onKeyDown="this.style.color='#000000'" onBlur="if (this.value=='') this.value=this.defaultValue" />
                 <input type="hidden" name="action" value="search" />
                 <input type="hidden" name="searchfrm_search_type" id="searchfrm_search_type" value="retailer" />
@@ -253,34 +241,20 @@
 <!-- Sidebar/Left Column/Wrap Start for Layout -->
 <div class="wrap">
     <div id="column_left">
-       
-                <div class="box">
+       <div class="box">
             <div class="top">
                 Shop by Category
 
                 <a href="#" class="expand_contract_mobile"></a>
             </div>
-			<?php
-			$sql="select * from category";
-             $res= $dbObj->select($sql);
-			?>
-            <div class="middle">
-                <ul id="categories">
-                    <li><a href="retailers.php">All Stores</a></li>
-                    <ul style='padding-left:0px;margin:0;'>
-					<?php for ($i = 0; $i < count($res); $i++) {?>
-					  <li><a href="cat_shop.php?id=<?php echo $res[$i]["cat_id"];?>"><?php echo $res[$i]["cat_name"];?></a></li>
-					 <?php } ?>
-					  </ul>       
-					
-			    </ul>
-            </div>
+             <?php include 'category.php';?>
+			 
             <div class="bottom">&nbsp;</div>
         </div>
-            
+        
         <div class="banner_left_ads">
              
-            <a href="http://www.tkqlhce.com/click-4220118-10769835" ><img src="img/uploads/image-link/1ymeadaht23ovq42quh7_1463847971.png" style="max-width:100%;" /></a>
+            <a href="http://www.cashbackkaboom.com/getpaid.php" ><img src="img/uploads/image-link//img/uploads/image-link//img/uploads/image-li" style="max-width:100%;" /></a>
         </div>
     </div>
 
@@ -298,253 +272,121 @@
 	   		$( "#slider_stores").fadeIn(1000)
 	   });
 	   </script>
-	   
-					<h3 class="featured_title">&nbsp;&nbsp;825&nbsp;Featured Stores</h3>
-			<div id="slider_stores">
+	   <?php
+			 $sql="select * from shop";
+             $res= $dbObj->select($sql);
+			 $result=count($res);
+			 
+			?>
+			<h3 class="featured_title">&nbsp;&nbsp;<?php echo $result;?>&nbsp;Featured Stores</h3>
+			
+			   <div id="slider_stores">
 				<div id="scrollstores" class="feat_stores">
-								<div>
+				<?php for ($i = 0; $i < count($res); $i++) {
+			       ?> 
+					<div>
 					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=2845214"><img src="http://www.cashbackkaboom.com/img/uploads/bbw61qlrbvhrfjj818v5_1406724941.jpg" width="120" height="65" alt="Decal Girl" title="Decal Girl" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailer56bc.html?rid=2845214"><img src="img/uploads/bbw61qlrbvhrfjj818v5_1406724941.jpg" width="120" height="65" alt="Decal Girl" title="Decal Girl" border="0" /></a><div style="clear: both"></div>
+					
+						<a href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>"><img src="images/img/<?php echo $res[$i]["picture"];?>" width="120" height="65" alt="Wild Tangent Media/Games" title="Wild Tangent Media/Games" border="0" /></a><div style="clear: both"></div>
 						<span class="thumbnail-text">
-							<a href="go2storee7b3.html?id=2845214" target="_blank">
-								Earn 5% Cash Back!
+							<a href="go2store.php?id=3049997" target="_blank">
+								<?php echo $res[$i]["cashback"];?>% Cashback
 							</a>
 						</span>
-					</div>				
+					</div>	
+									
 					<div style="clear: both"></div>
 				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=3635222"><img src="http://www.cashbackkaboom.com/img/uploads/42dgcnwt44sbp0hbwmg7_1417719147.jpg" width="120" height="65" alt="Office Depot and Office Max" title="Office Depot and Office Max" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailerf44b.html?rid=3635222"><img src="img/uploads/42dgcnwt44sbp0hbwmg7_1417719147.jpg" width="120" height="65" alt="Office Depot and Office Max" title="Office Depot and Office Max" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2storea299.html?id=3635222" target="_blank">
-								Earn 2.5% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=3226127"><img src="http://www.cashbackkaboom.com/img/uploads/fkcuvwvlhu5wkh4gytdc_1426033114.jpg" width="120" height="65" alt="Hoover Dirt Devil Orek" title="Hoover Dirt Devil Orek" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailere480.html?rid=3226127"><img src="img/uploads/fkcuvwvlhu5wkh4gytdc_1426033114.jpg" width="120" height="65" alt="Hoover Dirt Devil Orek" title="Hoover Dirt Devil Orek" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2storebe46.html?id=3226127" target="_blank">
-								Earn 2.5% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=1455022"><img src="http://www.cashbackkaboom.com/img/uploads/wj3tiunyvzpq4685c006_1410881574.jpg" width="120" height="65" alt="Home Shopping Network" title="Home Shopping Network" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailer4473.html?rid=1455022"><img src="img/uploads/wj3tiunyvzpq4685c006_1410881574.jpg" width="120" height="65" alt="Home Shopping Network" title="Home Shopping Network" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2store6721.html?id=1455022" target="_blank">
-								Earn 3% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=3449087"><img src="http://www.cashbackkaboom.com/img/uploads/dt7xnam61jwgd91lwkxc_1418677990.jpg" width="120" height="65" alt="Sears" title="Sears" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailer6d2a.html?rid=3449087"><img src="img/uploads/dt7xnam61jwgd91lwkxc_1418677990.jpg" width="120" height="65" alt="Sears" title="Sears" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2store1b0f.html?id=3449087" target="_blank">
-								Earn 1.5% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=409"><img src="http://www.cashbackkaboom.com/img/uploads/2bk87k9iqpvg3lf1zi01_1411662480.jpg" width="120" height="65" alt="Sesame Street" title="Sesame Street" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailer8a92.html?rid=409"><img src="img/uploads/2bk87k9iqpvg3lf1zi01_1411662480.jpg" width="120" height="65" alt="Sesame Street" title="Sesame Street" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2store2bbc.html?id=409" target="_blank">
-								Earn 1.75% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=38507"><img src="http://www.cashbackkaboom.com/img/uploads/9kjhybellhzu5y4odb7l_1408559409.jpg" width="120" height="65" alt="Famous Footwear" title="Famous Footwear" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailerf39a.html?rid=38507"><img src="img/uploads/9kjhybellhzu5y4odb7l_1408559409.jpg" width="120" height="65" alt="Famous Footwear" title="Famous Footwear" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2storef09c.html?id=38507" target="_blank">
-								Earn 6.5% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=3948"><img src="http://www.cashbackkaboom.com/img/uploads/vtnxnvdedu23measzdrh_1406175670.jpg" width="120" height="65" alt="BJs" title="BJs" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailer5788.html?rid=3948"><img src="img/uploads/vtnxnvdedu23measzdrh_1406175670.jpg" width="120" height="65" alt="BJs" title="BJs" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2store99e1.html?id=3948" target="_blank">
-								Earn 2% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=3222324"><img src="http://www.cashbackkaboom.com/img/uploads/6vsiblct337uckueaonq_1417022086.jpg" width="120" height="65" alt="Marvel Store" title="Marvel Store" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailer8a03.html?rid=3222324"><img src="img/uploads/6vsiblct337uckueaonq_1417022086.jpg" width="120" height="65" alt="Marvel Store" title="Marvel Store" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2storebac2.html?id=3222324" target="_blank">
-								Earn 4% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=4057800"><img src="http://www.cashbackkaboom.com/img/uploads/nbivnyw5swdkfm6zwi3e_1415383085.jpg" width="120" height="65" alt="Entertainment Book" title="Entertainment Book" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailere031.html?rid=4057800"><img src="img/uploads/nbivnyw5swdkfm6zwi3e_1415383085.jpg" width="120" height="65" alt="Entertainment Book" title="Entertainment Book" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2store9892.html?id=4057800" target="_blank">
-								Earn 10% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=2842051"><img src="http://www.cashbackkaboom.com/img/uploads/f2skec3c522di3ciruya_1420650638.jpg" width="120" height="65" alt="TASER" title="TASER" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailercbaf.html?rid=2842051"><img src="img/uploads/f2skec3c522di3ciruya_1420650638.jpg" width="120" height="65" alt="TASER" title="TASER" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2store8e1d.html?id=2842051" target="_blank">
-								Earn 5% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-								<div>
-					<div class="carousel_imagebox">
-					<!-- <a href="/view_retailer.php?rid=2628179"><img src="http://www.cashbackkaboom.com/img/uploads/ahq3bt3qv5y5cr3udnhr_1406176194.jpg" width="120" height="65" alt="Kmart" title="Kmart" border="0" /></a><div style="clear: both"></div> -->
-						<a href="view_retailerb202.html?rid=2628179"><img src="img/uploads/ahq3bt3qv5y5cr3udnhr_1406176194.jpg" width="120" height="65" alt="Kmart" title="Kmart" border="0" /></a><div style="clear: both"></div>
-						<span class="thumbnail-text">
-							<a href="go2store854b.html?id=2628179" target="_blank">
-								Earn 2.5% Cash Back!
-							</a>
-						</span>
-					</div>				
-					<div style="clear: both"></div>
-				</div>
-									<div style="clear: both"></div>
+                 <?php } ?>					
 				</div>
 			</div>
+			
 			<div style="clear: both"></div>
 		
 
 		<div id="alphabet">
 			<ul>
 				<li><a href="retailers.php">All</a></li>
-				<li><a href="retailersa242.html?letter=0-9" >0-9</a></li><li><a href="retailers4cf8.html?letter=A" >A</a></li><li><a href="retailers4efa.html?letter=B" >B</a></li><li><a href="retailers5a75.html?letter=C" >C</a></li><li><a href="retailersb65f.html?letter=D" >D</a></li><li><a href="retailersd155.html?letter=E" >E</a></li><li><a href="retailers7c27.html?letter=F" >F</a></li><li><a href="retailers3a02.html?letter=G" >G</a></li><li><a href="retailers8a77.html?letter=H" >H</a></li><li><a href="retailerse91d.html?letter=I" >I</a></li><li><a href="retailersb4ca.html?letter=J" >J</a></li><li><a href="retailers5e36.html?letter=K" >K</a></li><li><a href="retailersa4ee.html?letter=L" >L</a></li><li><a href="retailers489c.html?letter=M" >M</a></li><li><a href="retailers568c.html?letter=N" >N</a></li><li><a href="retailers3af0.html?letter=O" >O</a></li><li><a href="retailersefcf.html?letter=P" >P</a></li><li><a href="retailers4762.html?letter=Q" >Q</a></li><li><a href="retailers8e97.html?letter=R" >R</a></li><li><a href="retailerscf4a.html?letter=S" >S</a></li><li><a href="retailers3444.html?letter=T" >T</a></li><li><a href="retailers8847.html?letter=U" >U</a></li><li><a href="retailers2290.html?letter=V" >V</a></li><li><a href="retailerse608.html?letter=W" >W</a></li><li><a href="retailers14ee.html?letter=X" >X</a></li><li><a href="retailers2943.html?letter=Y" >Y</a></li><li class="last"><a href="retailersd401.html?letter=Z" >Z</a></li>			</ul>
+				<li><a href="retailers.php?letter=0-9" >0-9</a></li><li><a href="retailers.php?letter=A" >A</a></li><li><a href="retailers.php?letter=B" >B</a></li><li><a href="retailers.php?letter=C" >C</a></li><li><a href="retailers.php?letter=D" >D</a></li><li><a href="retailers.php?letter=E" >E</a></li><li><a href="retailers.php?letter=F" >F</a></li><li><a href="retailers.php?letter=G" >G</a></li><li><a href="retailers.php?letter=H" >H</a></li><li><a href="retailers.php?letter=I" >I</a></li><li><a href="retailers.php?letter=J" >J</a></li><li><a href="retailers.php?letter=K" >K</a></li><li><a href="retailers.php?letter=L" >L</a></li><li><a href="retailers.php?letter=M" >M</a></li><li><a href="retailers.php?letter=N" >N</a></li><li><a href="retailers.php?letter=O" >O</a></li><li><a href="retailers.php?letter=P" >P</a></li><li><a href="retailers.php?letter=Q" >Q</a></li><li><a href="retailers.php?letter=R" >R</a></li><li><a href="retailers.php?letter=S" >S</a></li><li><a href="retailers.php?letter=T" >T</a></li><li><a href="retailers.php?letter=U" >U</a></li><li><a href="retailers.php?letter=V" >V</a></li><li><a href="retailers.php?letter=W" >W</a></li><li><a href="retailers.php?letter=X" >X</a></li><li><a href="retailers.php?letter=Y" >Y</a></li><li class="last"><a href="retailers.php?letter=Z" >Z</a></li>			</ul>
 		</div>
 
-<?php
-	
+ <?php
 	$sql="SELECT * FROM shop
      JOIN category
      ON shop.cat_id=category.cat_id";
      $res= $dbObj->select($sql);
-	// var_dump($res)
+	//var_dump($res)
    ?>
 
 				<table align="center" width="100%" border="0" cellspacing="0" cellpadding="5" class="retailer_list">
-						<?php
-		 for ($i = 0; $i < count($res); $i++) {
-		?>		
-		<tr class="odd">
-		 
+				 <?php
+		           for ($i = 0; $i < count($res); $i++) {
+		         ?>
+						<tr class="odd">
 						<td width="125" align="center" valign="middle">
-							<span class="featured" alt="Featured Retailer" title="Featured Retailer"></span>							
-							<span class="retail_shop" id="store_list"><a href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>" class="md-trigger" data-modal="modal-10"><img src="images/img/<?php echo  $res[$i]["picture"];?>" width="120" height="65" alt="1-800-FLOWERS" title="1-800-FLOWERS" border="0" /></a></span>
-							<div class='rating'><div class='cover'></div><div class='progress' style='width: 0%;'></div></div>						</td>
+                                    <span class="featured" alt="Featured Retailer" title="Featured Retailer"></span>
+                                    <span class="retail_shop" id="store_list"><a href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>" class="md-trigger" data-modal="modal-10"><img src="images/img/<?php echo $res[$i]["picture"];?>" width="120" height="65" alt="1-800-FLOWERS" title="1-800-FLOWERS" border="0" /></a></span>
+                                    <div class='rating'>
+                                        <div class='cover'></div>
+                                        <div class='progress' style='width: 0%;'></div>
+                                    </div>
+                                </td>
 						<td align="left" valign="middle">
 		
 							<table width="100%" border="0" cellspacing="0" cellpadding="3" style="float:left;">
 								<tr>
-									<td width="65%" align="left" valign="top">
-										<a class="retailer_title" href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>"><?php echo $res[$i]["name"];?></a> <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.php?act=add&amp;rid=773'"><img src="img/images/star.png" border="0" alt="add" /></a>
+									<td width="65%" align="left" valign="top" class="no-margin-cell">
+										 <a class="retailer_title" href="view_retailer.php?sid=<?php echo $res[$i]["shop_id"];?>">
+                                                    <?php echo $res[$i]["name"];?>
+                                                </a> <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='/myfavorites.php?act=add&rid=36950'"><img src="img/images/star.png" border="0" alt="add" /></a>
 									</td>
-									<td nowrap="nowrap" width="10%" align="right" valign="top" class="no-content-cell"> &nbsp; </td>
-									<td nowrap="nowrap" width="30%" align="right" valign="top" class="no-content-cell"> &nbsp; </td>
+									<td nowrap="nowrap" width="10%" align="right" valign="top" class="no-content-cell">
+						<td nowrap="nowrap" width="30%" align="right" valign="top" class="no-content-cell">
+										&nbsp;
+									</td>
 								</tr>
 								<tr>
-							<td colspan="3" valign="middle" align="left">
-										<p class="cbk_green"><?php echo $res[$i]["shop_des"];?>&nbsp;<br /><br /></p>
-								Coupon Code:
-							<img style="margin-bottom: -4px; margin-left: 10px; z-index: -1" src="images/scisor.png">
-                              <p class="coupon_boxed">
-							  <?php
-							  if($res[$i]["coupon_code"]!=null){
-							  echo $res[$i]["coupon_code"];
-							  }else{
-								  echo 'No Required Coupon';
-							  }
-							  ?>
-							  
-							  </p>							
-																		
-						</td>
+									<td colspan="3" valign="middle" align="left" class="no-margin-cell"><p class="cbk_green">1-800-AnyLens sells all the name brand contact lenses with a Best Price Guarantee.  Easy ordering and fast delivery right to your door makes 1-800-Any-Lens a great source to get all your eye care products.&nbsp;</p></td>
 
 									<td valign="top" align="left">
 
-										<a href="go2store8199.html?id=36950" target="_blank" class="grab_this">
-											<span class="gold">Plus <?php echo $res[$i]["cashback"];?>% Cashback!</span><br />
-											<span class="grab_text">Grab This Deal</span>
-										</a>
+									<a href="go2store.php?id=36950" target="_blank" class="grab_this">
+										<span class="gold">Plus 4% Cashback!</span><br />
+										<span class="grab_text">Grab This Deal</span>
+									</a>
 
-<!-- ********************** Below added for Social Sharing ******************** -->
-										<div class="share_this_deal clear">
-											<span>Share this deal</span>
-									<a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fwww.cashbackkaboom.com%2Fview_retailer.php%3Frid%3D773%26ref%3D&amp;p[images][0]=http://www.cashbackkaboom.com/images/header/logo.png&amp;p[title]=1-800-FLOWERS&amp;p[summary]=Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21" target="_blank" onclick="window.open(this.href, '_blank', 'width=400,height=500');return false;"><img src="images/icon_facebook.png"  alt="Share on Facebook" /></a>
 
-										<a href="http://twitter.com/home?status=Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21%20http://www.cashbackkaboom.com/view_retailer.php?rid=773%26ref=" target="_blank" title="Share on Twitter" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_twitter.png" alt="Share on Twitter" /></a>
-											
-											<a href="https://plus.google.com/share?url=The%20Easiest%20Way%20to%20SAVE%20MONEY%20and%20MAKE%20MONEY%20on%20stuff%20you%20already%20buy!%20Save+Up+to+50%25+Off+on+Flowers+and+Gifts%21+Send+Truly+Original+Arrangements+at+1800flowers.+%28No+Promo+Code+Required%29%21%20http://www.cashbackkaboom.com/view_retailer.php?rid=773%26ref=" title="Share on Google+" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_google.png" alt="Share on Google+" /></a>
-	  							    	</div>
-<!-- ********************** Above added for Social Sharing ******************** -->
+									<!-- Added in Ability to Share Deals through Facebook -->
+
+                                      <div id="social_icons">
+										Share this deal.&nbsp;<a href="javascript:window.open('http://www.facebook.com/sharer.php?u=http://www.cashbackkaboom.com/view_retailer.php?rid=36950%26ref=0' , '_blank', 'width=400,height=500');void(0);" ><img src="images/icon_facebook.png"  alt="Share on Facebook" align="absmiddle" /></a> &nbsp;
+										<a href="http://twitter.com/home?status=1-800-AnyLens+sells+all+the+name+brand+contact+lenses+with+a+Best+Price+Guarantee.++Easy+ordering+and+fast+delivery+right+to+your+door+makes+1-800-Any-Lens+a+great+source+to+get+all+your+eye+care+products.&nbsp;http://www.cashbackkaboom.com/view_retailer.php?rid=36950%26ref=0" target="_blank" title="Share on Twitter" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_twitter.png" alt="Share on Twitter" align="absmiddle" /></a>
+&nbsp;&nbsp;
+<a href="https://plus.google.com/share?url=The Easiest Way to SAVE MONEY and MAKE MONEY on stuff you already buy! http://www.cashbackkaboom.com/view_retailer.php?rid=36950%26ref=0" target="_blank" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icon_google.png" alt="Share on Google+" align="absmiddle"></a>								
+										&nbsp;&nbsp;
+							
+                                      </div>
+									
 									</td>
 								</tr>
+						 
 							</table>
-						</td>
-					</tr>
-					<?php } ?>
-					
-			
-					
-
-	  							    	</div>
-<!-- ********************** Above added for Social Sharing ******************** -->
-									</td>
-								</tr>
-							</table>
-<!-- 							<span class="go2store" onclick="location.href='/go2store.php?id=898551'" target="_blank"><span class="cashback"> Plus 2.5% Cash Back!</span>  <span class="deal">GRAB THIS DEAL</span> </span> -->
 		
 						</td>
 					</tr>
+					 <?php 
+							}
+							?>
+	</table>
 
-									<tr>
+		
+					
+
+
+					<tr>
 					  <td valign="middle" align="center" colspan="2">
-						<div class='pagination'><span class='disabled'>&#139; Previous</span><span class='curPage'>1</span><a href='retailerse90b.html?column=title&amp;order=asc&amp;page=2'>2</a><a href='retailers4193.html?column=title&amp;order=asc&amp;page=3'>3</a><a href='retailers1523.html?column=title&amp;order=asc&amp;page=4'>4</a><a href='retailers66d6.html?column=title&amp;order=asc&amp;page=5'>5</a><a href='retailersa78b.html?column=title&amp;order=asc&amp;page=6'>6</a><a href='retailerseb28.html?column=title&amp;order=asc&amp;page=7'>7</a><a href='retailers8990.html?column=title&amp;order=asc&amp;page=8'>8</a><a href='retailers09aa.html?column=title&amp;order=asc&amp;page=9'>9</a>...<a href='retailers3e8f.html?column=title&amp;order=asc&amp;page=32'>32</a><a href='retailersd65b.html?column=title&amp;order=asc&amp;page=33'>33</a><a href='retailerse90b.html?column=title&amp;order=asc&amp;page=2'>Next &#155;</a></div>
+						<div class='pagination'><span class='disabled'>&#139; Previous</span><span class='curPage'>1</span><a href='retailers.php?column=title&order=asc&page=2'>2</a><a href='retailers.php?column=title&order=asc&page=3'>3</a><a href='retailers.php?column=title&order=asc&page=4'>4</a><a href='retailers.php?column=title&order=asc&page=5'>5</a><a href='retailers.php?column=title&order=asc&page=6'>6</a><a href='retailers.php?column=title&order=asc&page=7'>7</a><a href='retailers.php?column=title&order=asc&page=8'>8</a><a href='retailers.php?column=title&order=asc&page=9'>9</a>...<a href='retailers.php?column=title&order=asc&page=32'>32</a><a href='retailers.php?column=title&order=asc&page=33'>33</a><a href='retailers.php?column=title&order=asc&page=2'>Next &#155;</a></div>
 					  </td>
 					</tr>
 					</table>
@@ -557,7 +399,7 @@
 </div><!-- .wrap -->
 
 <div id="need_more_cash">
-	<a href="index.html"><img src="images/need_cash_back.png" alt="Need More Cash Back?" /></a><br />
+	<a href="../invite.php"><img src="images/need_cash_back.png" alt="Need More Cash Back?" /></a><br />
 	<a style="cursor:pointerl;" class="hide_link lo_link">Hide</a>
 </div>
 
@@ -573,15 +415,15 @@
 		<div>
 			<p class="blurb">Use Cash Back Kaboom’s fast and easy invitation methods to invite others. Those you invite will be added to your Shopping Network and you’ll get paid each time they shop - over and over again - forever!*</p>
 			<div id="footer_form">
-				<form name="footer_modal" action="http://www.cashbackkaboom.com/#" method="post">
-					<p><span class="footer_verb">Copy It! </span> <input id="copyit_txtbox" type="text" name="copy" readonly="readonly" onfocus="this.select();" onclick="this.focus();this.select();" value="0.html"></p><br />
+				<form name="footer_modal" action="#" method="post">
+					<p><span class="footer_verb">Copy It! </span> <input id="copyit_txtbox" type="text" name="copy" readonly="readonly" onfocus="this.select();" onclick="this.focus();this.select();" value="http://www.cashbackkaboom.com/0"></p><br />
 					<p><span class="footer_verb">Email it!</span> <input id="fname_txtbox" type="text" name="friends_name" placeholder="Friend's Name"> &nbsp; <input id="femail_txtbox" type="text" name="friends_email" placeholder="Friend's Email"></p><br />
 					<p><span class="footer_verb">Share It!</span> &nbsp; &nbsp; &nbsp; 
-						<a href="0.html" onclick=" window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(href), 'facebook-share-dialog', 'width=626,height=436'); return false;"><img id="face_btn" src="img/modal/facebook_btn.png" alt="facebook" style="width: 28%" /></a> &nbsp; &nbsp; &nbsp; 
+						<a href="http://cashbackkaboom.com/0" onclick=" window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(href), 'facebook-share-dialog', 'width=626,height=436'); return false;"><img id="face_btn" src="img/modal/facebook_btn.png" alt="facebook" style="width: 28%" /></a> &nbsp; &nbsp; &nbsp; 
 
-						<script type="text/javascript" src="../platform.twitter.com/widgets.js"></script>
+						<script type="text/javascript" src="/platform.twitter.com/widgets.js"></script>
 
-						<a href="https://twitter.com/intent/tweet?text=Want%20to%20save%20money%20on%20items%20you're%20currently%20buying?%20Want%20to%20make%20money%20as%20well?%20Check%20this%20out&amp;url=http%3A%2F%2Fcashbackkaboom.com/0"><img id="twit_btn" src="img/modal/twitter_btn.png" style="width: 28%" alt="Tweet" /></a>
+						<a href="https://twitter.com/intent/tweet?text=Want%20to%20save%20money%20on%20items%20you're%20currently%20buying?%20Want%20to%20make%20money%20as%20well?%20Check%20this%20out&url=http%3A%2F%2Fcashbackkaboom.com/0"><img id="twit_btn" src="img/modal/twitter_btn.png" style="width: 28%" alt="Tweet" /></a>
      				</p> 
 				</form>
 			</div>
@@ -603,7 +445,7 @@
 			<p class="modal_paragraph">As a member, you get special discounts and cash<br />back from over 1,500 of your favorite retailers.
 			</p>
 
-			<form action="http://www.cashbackkaboom.com/index.php" method="post">
+			<form action="index.php" method="post">
 				<input class="textbox_guest"  type="text" name="fname" placeholder="First Name"><br />
 				<input class="textbox_guest"  type="text" name="lname" placeholder="Last Name"><br />
 				<input class="textbox_guest"  type="text" name="email" placeholder="Email Address"><br />
@@ -613,8 +455,8 @@
 				<input class="modal_btn" type="submit" value="TRY IT NOW - IT'S FREE!">
 			</form>
 
-			<p id="shop_modal_login_member"> Already a member? <a href="login.html" class="ignore-register-modal">Login Now</a> </p>
-			<p id="shop_modal_login_password"> Forgot Your Password? <a href="forgot.html" class="ignore-register-modal">Reset Now</a> </p>
+			<p id="shop_modal_login_member"> Already a member? <a href="login.php" class="ignore-register-modal">Login Now</a> </p>
+			<p id="shop_modal_login_password"> Forgot Your Password? <a href="forgot.php" class="ignore-register-modal">Reset Now</a> </p>
 
 			<button class="md-close"></button>
 		</div>
@@ -634,19 +476,22 @@
 <div id="footer">
 	<div class="wrap">
 		<div class="left">
+
 			<a href="faq.php" class="lo_link">FAQs</a>&nbsp;&nbsp;<a href="terms.php" class="lo_link">Terms and Conditions</a>&nbsp;&nbsp;<a href="privacy.php" class="lo_link">Privacy Policy</a>&nbsp;&nbsp;<a href="contact.php" class="lo_link">Contact Us</a>
 			<br />
+
+			
 		</div>
 
 		<div class="right">
-			<a class="ignore-register-modal" href="index.html"><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>
+			<a class="ignore-register-modal" href=""><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>
 		</div>
 
 		<div class="share_text">
 		<span>  
 		    <a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http://www.cashbackkaboom.com/30&amp;p[images][0]=http://www.cashbackkaboom.com/images/header/logo.png&amp;p[title]=Check this video out. You get cash back when you shop and make money too. It\'s Free!', '_blank', 'width=400,height=500');void(0);"><img src="img/facebook.png" class="share_text" alt="Share on Facebook" width="35" align="absmiddle"></a>
 		    <a href="javascript:window.open('http://twitter.com/home?status=Check this video out. You get cash back when you shop and make money too. It\'s Free! http://www.cashbackkaboom.com/30', '_blank', 'width=400,height=500');void(0);" class="share_text"><img src="img/twitter.png" alt="Share on Twitter" width="35" align="absmiddle"></a>
-		    <a href="https://plus.google.com/share?url=Earn%20Cashback%20http://www.cashbackkaboom.com/30" target="_blank" onclick="javascript:window.open(this.href,
+		    <a href="https://plus.google.com/share?url=Earn Cashback http://www.cashbackkaboom.com/30" target="_blank" onclick="javascript:window.open(this.href,
 		    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="share_text"><img src="img/googleplus.png" width="35" alt="Share on Google+" align="absmiddle"></a>
 		</span>
 		</div>
@@ -654,7 +499,7 @@
 		<div class="clear"></div>
 
 		<!-- Do not remove this copyright notice! -->
-			<div class="powered-by"><span class="powered-by">&copy; 2017 Cash Back EJINS | website by: <a class="ignore-register-modal" href="#" title="Creative Momentum" target="_blank"><b>EJINS<b></a><span><div>
+			<div class="powered-by">&copy; 2017 Cash Back Ramsitech <div>
 		<!-- Do not remove this copyright notice! -->
 	</div>
 </div>
@@ -732,7 +577,7 @@ jQuery(document).ready(function($){
         });
 
 	$("body").on("click", ".hide_link", function(){
-		$.get( "session/hide_more_cash.html");
+		$.get( "session/hide_more_cash.php");
 		$("#need_more_cash").fadeOut();
 	});
 });
@@ -765,7 +610,7 @@ $(function(){
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-45554800-1', 'cashbackkaboom.com');
   ga('send', 'pageview');
@@ -773,6 +618,4 @@ $(function(){
 </script>
 
 </body>
-
-
 </html>

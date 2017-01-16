@@ -542,8 +542,9 @@
         <div id="footer">
             <div class="wrap">
                 <div class="left">
-                    <a href="faq.html" class="ignore-register-modal">FAQs</a>&nbsp;&nbsp;<a href="terms.html" class="ignore-register-modal">Terms and Conditions</a>&nbsp;&nbsp;<a href="privacy.html" class="ignore-register-modal">Privacy Policy</a>&nbsp;&nbsp;<a href="contact.html" class="ignore-register-modal">Contact Us</a>
-                </div>
+			<a href="faq.php" class="lo_link">FAQs</a>&nbsp;&nbsp;<a href="terms.php" class="lo_link">Terms and Conditions</a>&nbsp;&nbsp;<a href="privacy.php" class="lo_link">Privacy Policy</a>&nbsp;&nbsp;<a href="contact.php" class="lo_link">Contact Us</a>
+			<br />
+		</div>
 
                 <div class="right">
                     <a class="ignore-register-modal" href="index.html"><img src="images/footer_logo.png" title="Return to Title Page" alt="Cash Back Kaboom" /></a>

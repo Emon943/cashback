@@ -362,7 +362,7 @@
 <div id="footer">
 	<div class="wrap">
 		<div class="left">
-			<a href="#" class="ignore-register-modal">FAQs</a>&nbsp;&nbsp;<a href="#" class="ignore-register-modal">Terms and Conditions</a>&nbsp;&nbsp;<a href="#" class="ignore-register-modal">Privacy Policy</a>&nbsp;&nbsp;<a href="#" class="ignore-register-modal">Contact Us</a>
+			<a href="faq.php" class="ignore-register-modal">FAQs</a>&nbsp;&nbsp;<a href="terms.php" class="ignore-register-modal">Terms and Conditions</a>&nbsp;&nbsp;<a href="privacy.php" class="ignore-register-modal">Privacy Policy</a>&nbsp;&nbsp;<a href="contact.php" class="ignore-register-modal">Contact Us</a>
 		</div>
 
 		<div class="right">

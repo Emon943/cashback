@@ -364,7 +364,8 @@
 <div id="footer">
 	<div class="wrap">
 		<div class="left">
-			<a href="#" class="ignore-register-modal">FAQs</a>&nbsp;&nbsp;<a href="#" class="ignore-register-modal">Terms and Conditions</a>&nbsp;&nbsp;<a href="#" class="ignore-register-modal">Privacy Policy</a>&nbsp;&nbsp;<a href="#" class="ignore-register-modal">Contact Us</a>
+			<a href="faq.php" class="lo_link">FAQs</a>&nbsp;&nbsp;<a href="terms.php" class="lo_link">Terms and Conditions</a>&nbsp;&nbsp;<a href="privacy.php" class="lo_link">Privacy Policy</a>&nbsp;&nbsp;<a href="contact.php" class="lo_link">Contact Us</a>
+			<br />
 		</div>
 
 		<div class="right">

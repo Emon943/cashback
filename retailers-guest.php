@@ -151,8 +151,8 @@
                     <a href="#" class="expand_contract_mobile"></a>
                 </div>
                 <?php
-			$sql="select * from category";
-             $res= $dbObj->select($sql);
+			  $sql="select * from category";
+              $res= $dbObj->select($sql);
 			?>
                     <div class="middle">
                         <ul id="categories">

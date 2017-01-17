@@ -82,7 +82,7 @@
 
                                         
                         <div class="login_signup">
-                            <a href="login.php" class="lo_link ignore-register-modal">Log In</a> | <a href="register.php">Sign Up</a>
+                            <a href="login.php" class="lo_link ignore-register-modal">Log In</a> | <a href="index.php">Sign Up</a>
                         </div>
 
                                 </div>

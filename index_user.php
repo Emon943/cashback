@@ -203,7 +203,6 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=3226127"><img src="http://www.cashbackkaboom.com/img/uploads/fkcuvwvlhu5wkh4gytdc_1426033114.jpg" width="120" height="65" alt="Hoover Dirt Devil Orek" title="Hoover Dirt Devil Orek" border="0" /></a><div style="clear: both"></div> -->
                                     <a href="view_retailere480.html?rid=3226127"><img src="img/uploads/fkcuvwvlhu5wkh4gytdc_1426033114.jpg" width="120" height="65" alt="Hoover Dirt Devil Orek" title="Hoover Dirt Devil Orek" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -255,7 +254,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=38507"><img src="http://www.cashbackkaboom.com/img/uploads/9kjhybellhzu5y4odb7l_1408559409.jpg" width="120" height="65" alt="Famous Footwear" title="Famous Footwear" border="0" /></a><div style="clear: both"></div> -->
+                                   
                                     <a href="view_retailerf39a.html?rid=38507"><img src="img/uploads/9kjhybellhzu5y4odb7l_1408559409.jpg" width="120" height="65" alt="Famous Footwear" title="Famous Footwear" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -268,7 +267,7 @@
                             </div>
                             <div>
                                 <div class="carousel_imagebox">
-                                    <!-- <a href="/view_retailer.php?rid=3948"><img src="http://www.cashbackkaboom.com/img/uploads/vtnxnvdedu23measzdrh_1406175670.jpg" width="120" height="65" alt="BJs" title="BJs" border="0" /></a><div style="clear: both"></div> -->
+                                   
                                     <a href="view_retailer5788.html?rid=3948"><img src="img/uploads/vtnxnvdedu23measzdrh_1406175670.jpg" width="120" height="65" alt="BJs" title="BJs" border="0" /></a>
                                     <div style="clear: both"></div>
                                     <span class="thumbnail-text">
@@ -387,7 +386,7 @@
 
                         <tr class="odd">
                             <td width="125" align="center" valign="middle">
-                                <span class="featured" alt="Featured Retailer" title="Featured Retailer"></span> <span class="retail_shop" id="store_list"><a href="<?php echo  $res[$i]["url"];?>"><img src="images/img/<?php echo  $res[$i]["picture"];?>" width="120" height="65" alt="1-800-ANY LENS" title="1-800-ANY LENS" border="0" /></a></span>
+                                <span class="featured" alt="Featured Retailer" title="Featured Retailer"></span> <span class="retail_shop" id="store_list"><a href="<?php echo $res[$i]["url"];?>"><img src="images/img/<?php echo $res[$i]["picture"];?>" width="120" height="65" alt="1-800-ANY LENS" title="1-800-ANY LENS" border="0" /></a></span>
                                 <div class='rating'>
                                     <div class='cover'></div>
                                     <div class='progress' style='width: 0%;'></div>
@@ -396,14 +395,14 @@
                             <td align="left" valign="middle">
 
                                 <table width="100%" border="0" cellspacing="0" cellpadding="3" style="float:left;">
+								<h2><span style="color:green;" id="res"></span></h2>
                                     <tr>
                                         <td width="65%" align="left" valign="top" class="no-margin-cell">
                                             <a class="retailer_title" href="<?php echo  $res[$i]["url"];?>"><?php echo $res[$i]["name"];?></a>
                                             <a href="#" onclick="if (confirm('Are You sure You realy want to add this retailer to your favorites?') )location.href='index.html?act=add&amp;rid=36950'"><img src="img/images/star.png" border="0" alt="add" /></a>
                                         </td>
                                         <td nowrap="nowrap" width="10%" align="right" valign="top" class="no-content-cell">
-                                            <!-- 										<a class="coupons" href="/view_retailer.php?rid=36950#coupons" title="1-800-ANY LENS Coupons">43</a>
- --></td>
+                                         </td>
                                         <td nowrap="nowrap" width="30%" align="right" valign="top" class="no-content-cell">
                                             &nbsp;
                                         </td>
@@ -415,7 +414,7 @@
 
                                         <td valign="top" align="left">
 
-                                            <a href="<?php echo  $res[$i]["url"];?>" target="_blank" class="grab_this">
+                                            <a href="<?php echo $res[$i]["url"];?>" target="_blank" class="grab_this" id="link" onclick="doalert();">
                                                 <span class="gold">Plus <?php echo $res[$i]["cashback"];?>% Cashback!</span>
                                                 <br />
                                                 <span class="grab_text">Grab This Deal</span>

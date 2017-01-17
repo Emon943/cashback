@@ -3,6 +3,8 @@
     ob_start();
     include 'config/config.php';
 	$dbObj =	new DBUtility();
+	$user_id =$_SESSION['member_id'];
+	//echo $user_id; 
     ?>
     <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,6 +32,27 @@
         <script src="js/viewport.js"></script>
         <script src="../code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script src="js/jquery.slicknav.js"></script>
+		<script>
+      function doalert() {
+        var url = document.getElementById("link").getAttribute("href");
+		//alert( url);
+		var xhttp;
+  
+     xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+	  //alert(xhttp.readyState);
+	  //alert(xhttp.status);
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("res").innerHTML = xhttp.responseText;
+    }
+  }
+  
+   testAjax='url.php?url='+url;
+	xhttp.open("GET",testAjax);
+    xhttp.send();   
+}
+
+</script>
 
         <style>
             .slicknav_menu {
@@ -47,17 +70,7 @@
             }
         </style>
 
-        <!--[if lte IE 9]>
-            <script type="text/javascript" src="js/placeholder_fix.js"></script>
-        <![endif]-->
-
-        <!--[if IE 8]>
-            <link rel="stylesheet" type="text/css" href="css/ie8.css" />
-        <![endif]-->
-
-        <!--[if lt IE 8]>
-            <link rel="stylesheet" type="text/css" href="css/ie_less.css" />
-        <![endif]-->
+       
         <script src="../cdn.optimizely.com/js/261957161.js"></script>
     </head>
 
@@ -159,7 +172,7 @@
 								</div>
 								<?php
 							}else{
-								echo "Welcome" ." " .$_SESSION['ref_id'] . "!";
+								echo "Welcome" ." " .@$_SESSION['ref_id'] . "!";
 							}
 							?>
 							

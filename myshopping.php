@@ -1,4 +1,10 @@
+
 <?php include 'user/sub-header.php';?>
+
+ <?php
+ $sql="select * from tbl_url where user_id =$user_id";
+ $result=$dbObj->select($sql);
+?>
             <ul id="logged_nav">
                 <li id="shop_nav"><a href="retailers.php"></a></li>
                 <li id="coupons_nav"><a href="coupons.php"></a></li>
@@ -139,11 +145,18 @@ function showTable3(){
                 <th class="network_col_header" width="70%">Store</th>
                 <th class="network_col_header" width="30%">Date/Time</th>
               </tr>
-                          <tr class="row_odd">
-                <td ><a class="click_history" href="go2store.php?id=1702763" target="_blank">Hotels.com</a></td>
-                <td style="color: #848482;">11 Jan 2017 02:30:55</td>
+			 <?php
+			for ($i = 0; $i < count($result); $i++) {
+							
+	        ?>	
+               <tr class="row_odd">
+                <td ><a class="click_history" href="<?php echo $result[$i]["url"];?>" target="_blank"><?php echo $result[$i]["url"];?></a></td>
+                <td style="color: #848482;"><?php echo $result[$i]["date"];?></td>
               </tr>
-                       </table>
+			 <?php 
+			 } 
+			 ?>
+              </table>
 
     
 
